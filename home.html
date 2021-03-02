@@ -42,32 +42,38 @@
           </div>
           <div class="row mt-4 g-1 px-4 mb-5">
             <div class="col-md-2">
-              <div class="card-inner p-3 d-flex flex-column align-items-center"> <img src="images\icons\dslr-camera.png" width="50">
+              <div class="card-inner p-3 d-flex flex-column align-items-center">
+                <button class="btn filter-button" data-filter="car"><img src="images\icons\dslr-camera.png" width="50"></i></button>
                 <div class="text-center mg-text"> <span class="mg-text">Camera</span> </div>
               </div>
             </div>
             <div class="col-md-2">
-              <div class="card-inner p-3 d-flex flex-column align-items-center"> <img src="images\icons\vaccum-cleaner.png" width="50">
+              <div class="card-inner p-3 d-flex flex-column align-items-center">
+                <button class="btn filter-button" data-filter="bike"><img src="images\icons\vaccum-cleaner.png" width="50"></i></button>
                 <div class="text-center mg-text"> <span class="mg-text">Home Appliances</span> </div>
               </div>
             </div>
             <div class="col-md-2">
-              <div class="card-inner p-3 d-flex flex-column align-items-center"> <img src="images\icons\sweater.png" width="50">
+              <div class="card-inner p-3 d-flex flex-column align-items-center">
+                <button class="btn filter-button" data-filter="train"><img src="images\icons\sweater.png" width="50"></i></button>
                 <div class="text-center mg-text"> <span class="mg-text">Man's Fashion</span> </div>
               </div>
             </div>
             <div class="col-md-2">
-              <div class="card-inner p-3 d-flex flex-column align-items-center"> <img src="images\icons\cocktail-dress.png" width="50">
+              <div class="card-inner p-3 d-flex flex-column align-items-center">
+                <button class="btn filter-button" data-filter="plane"><img src="images\icons\cocktail-dress.png" width="50"></i></button>
                 <div class="text-center mg-text"> <span class="mg-text">Woman's Fashion</span> </div>
               </div>
             </div>
             <div class="col-md-2">
-              <div class="card-inner p-3 d-flex flex-column align-items-center"> <img src="images\icons\suitcases.png" width="50">
+              <div class="card-inner p-3 d-flex flex-column align-items-center">
+                <button class="btn filter-button" data-filter="heli"><img src="images\icons\suitcases.png" width="50"></i></button>
                 <div class="text-center mg-text"> <span class="mg-text">Travel Essentials</span> </div>
               </div>
             </div>
             <div class="col-md-2">
-              <div class="card-inner p-3 d-flex flex-column align-items-center"> <img src="images\icons\open-book.png" width="50">
+              <div class="card-inner p-3 d-flex flex-column align-items-center">
+                <button class="btn filter-button" data-filter="bicycle"><img src="images\icons\open-book.png" width="50"></i></button>
                 <div class="text-center mg-text"> <span class="mg-text">Books</span> </div>
               </div>
             </div>
@@ -77,14 +83,13 @@
     </div>
   </div>
 
-
   <div class="container">
     <br>
     <h4>Bootstrap 4 and CCS3 Product Cards with Transition - Techhowdy(demonguru18) - Lyoid Lopes</h2>
       <br>
       <div class="row" id="ads">
         <!-- Category Card -->
-        <div class="col-md-4">
+        <div class="col-md-4 filter car">
           <div class="card rounded">
             <div class="card-image">
               <span class="card-notify-badge">Low KMS</span>
@@ -104,7 +109,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 filter car">
           <div class="card rounded">
             <div class="card-image">
               <span class="card-notify-badge">Fully-Loaded</span>
@@ -118,14 +123,14 @@
             </div>
             <div class="card-body text-center">
               <div class="ad-title m-auto">
-                <h5>Honda Accord Hybrid LT</h5>
+                <h5>Honda CIVIC HATCHBACK LS</h5>
               </div>
               <a class="ad-btn" href="#">View</a>
             </div>
           </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-4 filter bike">
           <div class="card rounded">
             <div class="card-image">
               <span class="card-notify-badge">Price Reduced</span>
@@ -139,7 +144,7 @@
             </div>
             <div class="card-body text-center">
               <div class="ad-title m-auto">
-                <h5>Honda CIVIC HATCHBACK LS</h5>
+                <h5>Honda Accord Hybrid LT</h5>
               </div>
               <a class="ad-btn" href="#">View</a>
             </div>
@@ -148,6 +153,7 @@
 
       </div>
   </div>
+
   <a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i class="bi bi-arrow-bar-up"></i></a>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -169,54 +175,31 @@
         }
       }
     }
+  </script>
+  <script>
+    $(document).ready(function() {
 
-    filterSelection("all") // Execute the function and show all columns
-    function filterSelection(c) {
-      var x, i;
-      x = document.getElementsByClassName("column");
-      if (c == "all") c = "";
-      // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-      for (i = 0; i < x.length; i++) {
-        w3RemoveClass(x[i], "show");
-        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-      }
-    }
+      $(".filter-button").click(function() {
+        var value = $(this).attr('data-filter');
 
-    // Show filtered elements
-    function w3AddClass(element, name) {
-      var i, arr1, arr2;
-      arr1 = element.className.split(" ");
-      arr2 = name.split(" ");
-      for (i = 0; i < arr2.length; i++) {
-        if (arr1.indexOf(arr2[i]) == -1) {
-          element.className += " " + arr2[i];
+        if (value == "all") {
+          //$('.filter').removeClass('hidden');
+          $('.filter').show('1000');
+        } else {
+          //            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
+          //            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+          $(".filter").not('.' + value).hide('3000');
+          $('.filter').filter('.' + value).show('3000');
+
         }
-      }
-    }
-
-    // Hide elements that are not selected
-    function w3RemoveClass(element, name) {
-      var i, arr1, arr2;
-      arr1 = element.className.split(" ");
-      arr2 = name.split(" ");
-      for (i = 0; i < arr2.length; i++) {
-        while (arr1.indexOf(arr2[i]) > -1) {
-          arr1.splice(arr1.indexOf(arr2[i]), 1);
-        }
-      }
-      element.className = arr1.join(" ");
-    }
-
-    // Add active class to the current button (highlight it)
-    var btnContainer = document.getElementById("myBtnContainer");
-    var btns = btnContainer.getElementsByClassName("btn");
-    for (var i = 0; i < btns.length; i++) {
-      btns[i].addEventListener("click", function() {
-        var current = document.getElementsByClassName("active");
-        current[0].className = current[0].className.replace(" active", "");
-        this.className += " active";
       });
-    }
+
+      if ($(".filter-button").removeClass("active")) {
+        $(this).removeClass("active");
+      }
+      $(this).addClass("active");
+
+    });
   </script>
 </body>
 </body>
