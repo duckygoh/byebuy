@@ -2,25 +2,32 @@
 <html lang="en" dir="ltr">
 
 <head>
+  <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <title>Start Renting!</title>
-  <link rel="shortcut icon" type="image/jpg" href="images/favicon.ico" />
+
+  <!-- CSS -->
   <link rel="stylesheet" href="css/search-bar.css">
   <link rel="stylesheet" href="css/cards.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
-  <title></title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+  <!-- title and favicon -->
+  <title>Start Renting!</title>
+  <link rel="shortcut icon" type="image/jpg" href="images/favicon.ico" />
 </head>
 
 <body>
-  <nav style="background-color:white" class="navbar navbar-expand-lg navbar-light fixed-top">
+
+  <!-- navbar -->
+  <nav style="background-color:white;" class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container-md">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="index.html"">
-      <img src=" images/logo.png" width="100" height="30" alt="">
+      <a class="navbar-brand" href="index.html">
+        <img src=" images/logo.png" width="100" height="30" alt="">
       </a>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -30,12 +37,14 @@
             <button type="button" class="btn btn-outline-primary">Profile</button>
           </a>
           <a href="login.html">
-          <button type="button" class="btn btn-outline-danger">Logout</button>
+            <button type="button" class="btn btn-outline-danger">Logout</button>
           </a>
         </form>
       </div>
     </div>
   </nav>
+
+  <!-- search bar with catagory icons -->
   <div class="container mt-4">
     <div class="row d-flex justify-content-center">
       <div style="margin-top:50px;" class="col-md-9">
@@ -87,164 +96,166 @@
     </div>
   </div>
 
+  <!-- listing cards -->
   <div class="container">
     <br>
-    <h4>Bootstrap 4 and CCS3 Product Cards with Transition - Techhowdy(demonguru18) - Lyoid Lopes</h2>
-      <br>
-      <div class="row" id="ads">
-        <!-- Category Card -->
-        <div class="col-md-4 filter car">
-          <div class="card rounded">
-            <div class="card-image">
-              <span class="card-notify-badge">Low KMS</span>
-              <span class="card-notify-year">2018</span>
-              <img class="card-img-top img-fluid" src="https://media.karousell.com/media/photos/products/2021/2/27/sony_rx_100_m3_1614399109_2e7ce6c9_progressive.jpg" alt="Alternate Text" />
+    <h2>Latest Drop</h2>
+    <br>
+    <div class="row" id="ads">
+      <!-- Category Card -->
+      <div class="col-md-4 filter car">
+        <div class="card rounded">
+          <div class="card-image">
+            <span class="card-notify-badge">Low KMS</span>
+            <span class="card-notify-year">2018</span>
+            <img class="card-img-top img-fluid" src="https://media.karousell.com/media/photos/products/2021/2/27/sony_rx_100_m3_1614399109_2e7ce6c9_progressive.jpg" alt="Alternate Text" />
+          </div>
+          <div class="card-image-overlay m-auto">
+            <span class="card-detail-badge">Used</span>
+            <span class="card-detail-badge">$28,000.00</span>
+            <span class="card-detail-badge">13000 Kms</span>
+          </div>
+          <div class="card-body text-center">
+            <div class="ad-title m-auto">
+              <h5>Honda Accord LX</h5>
             </div>
-            <div class="card-image-overlay m-auto">
-              <span class="card-detail-badge">Used</span>
-              <span class="card-detail-badge">$28,000.00</span>
-              <span class="card-detail-badge">13000 Kms</span>
-            </div>
-            <div class="card-body text-center">
-              <div class="ad-title m-auto">
-                <h5>Honda Accord LX</h5>
-              </div>
-              <a class="ad-btn" href="#">View</a>
-            </div>
+            <a class="ad-btn" href="#">View</a>
           </div>
         </div>
-        <div class="col-md-4 filter car">
-          <div class="card rounded">
-            <div class="card-image">
-              <span class="card-notify-badge">Fully-Loaded</span>
-              <span class="card-notify-year">2017</span>
-              <img class="card-img-top img-fluid" src="https://media.karousell.com/media/photos/products/2021/2/28/fujifilm_xh1_with_vertical_bat_1614508688_56895aa5_progressive.jpg" alt="Alternate Text" />
-            </div>
-            <div class="card-image-overlay m-auto">
-              <span class="card-detail-badge">Used</span>
-              <span class="card-detail-badge">$28,000.00</span>
-              <span class="card-detail-badge">13000 Kms</span>
-            </div>
-            <div class="card-body text-center">
-              <div class="ad-title m-auto">
-                <h5>Honda CIVIC HATCHBACK LS</h5>
-              </div>
-              <a class="ad-btn" href="#">View</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 filter bike">
-          <div class="card rounded">
-            <div class="card-image">
-              <span class="card-notify-badge">Price Reduced</span>
-              <span class="card-notify-year">2018</span>
-              <img class="card-img-top img-fluid" src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC091A021001.jpg&width=440&height=262" alt="Alternate Text" />
-            </div>
-            <div class="card-image-overlay m-auto">
-              <span class="card-detail-badge">Used</span>
-              <span class="card-detail-badge">$22,000.00</span>
-              <span class="card-detail-badge">8000 Kms</span>
-            </div>
-            <div class="card-body text-center">
-              <div class="ad-title m-auto">
-                <h5>Honda Accord Hybrid LT</h5>
-              </div>
-              <a class="ad-btn" href="#">View</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 filter car">
-          <div class="card rounded">
-            <div class="card-image">
-              <span class="card-notify-badge">Fully-Loaded</span>
-              <span class="card-notify-year">2017</span>
-              <img class="card-img-top img-fluid" src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=CAC80HOC021B121001.jpg&width=440&height=262" alt="Alternate Text" />
-            </div>
-            <div class="card-image-overlay m-auto">
-              <span class="card-detail-badge">Used</span>
-              <span class="card-detail-badge">$28,000.00</span>
-              <span class="card-detail-badge">13000 Kms</span>
-            </div>
-            <div class="card-body text-center">
-              <div class="ad-title m-auto">
-                <h5>Honda CIVIC HATCHBACK LS</h5>
-              </div>
-              <a class="ad-btn" href="#">View</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 filter bike">
-          <div class="card rounded">
-            <div class="card-image">
-              <span class="card-notify-badge">Price Reduced</span>
-              <span class="card-notify-year">2018</span>
-              <img class="card-img-top img-fluid" src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC091A021001.jpg&width=440&height=262" alt="Alternate Text" />
-            </div>
-            <div class="card-image-overlay m-auto">
-              <span class="card-detail-badge">Used</span>
-              <span class="card-detail-badge">$22,000.00</span>
-              <span class="card-detail-badge">8000 Kms</span>
-            </div>
-            <div class="card-body text-center">
-              <div class="ad-title m-auto">
-                <h5>Honda Accord Hybrid LT</h5>
-              </div>
-              <a class="ad-btn" href="#">View</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 filter car">
-          <div class="card rounded">
-            <div class="card-image">
-              <span class="card-notify-badge">Fully-Loaded</span>
-              <span class="card-notify-year">2017</span>
-              <img class="card-img-top img-fluid" src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=CAC80HOC021B121001.jpg&width=440&height=262" alt="Alternate Text" />
-            </div>
-            <div class="card-image-overlay m-auto">
-              <span class="card-detail-badge">Used</span>
-              <span class="card-detail-badge">$28,000.00</span>
-              <span class="card-detail-badge">13000 Kms</span>
-            </div>
-            <div class="card-body text-center">
-              <div class="ad-title m-auto">
-                <h5>Honda CIVIC HATCHBACK LS</h5>
-              </div>
-              <a class="ad-btn" href="#">View</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 filter bike">
-          <div class="card rounded">
-            <div class="card-image">
-              <span class="card-notify-badge">Price Reduced</span>
-              <span class="card-notify-year">2018</span>
-              <img class="card-img-top img-fluid" src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC091A021001.jpg&width=440&height=262" alt="Alternate Text" />
-            </div>
-            <div class="card-image-overlay m-auto">
-              <span class="card-detail-badge">Used</span>
-              <span class="card-detail-badge">$22,000.00</span>
-              <span class="card-detail-badge">8000 Kms</span>
-            </div>
-            <div class="card-body text-center">
-              <div class="ad-title m-auto">
-                <h5>Honda Accord Hybrid LT</h5>
-              </div>
-              <a class="ad-btn" href="#">View</a>
-            </div>
-          </div>
-        </div>
-
       </div>
+      <div class="col-md-4 filter car">
+        <div class="card rounded">
+          <div class="card-image">
+            <span class="card-notify-badge">Fully-Loaded</span>
+            <span class="card-notify-year">2017</span>
+            <img class="card-img-top img-fluid" src="https://media.karousell.com/media/photos/products/2021/2/28/fujifilm_xh1_with_vertical_bat_1614508688_56895aa5_progressive.jpg" alt="Alternate Text" />
+          </div>
+          <div class="card-image-overlay m-auto">
+            <span class="card-detail-badge">Used</span>
+            <span class="card-detail-badge">$28,000.00</span>
+            <span class="card-detail-badge">13000 Kms</span>
+          </div>
+          <div class="card-body text-center">
+            <div class="ad-title m-auto">
+              <h5>Honda CIVIC HATCHBACK LS</h5>
+            </div>
+            <a class="ad-btn" href="#">View</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 filter bike">
+        <div class="card rounded">
+          <div class="card-image">
+            <span class="card-notify-badge">Price Reduced</span>
+            <span class="card-notify-year">2018</span>
+            <img class="card-img-top img-fluid" src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC091A021001.jpg&width=440&height=262" alt="Alternate Text" />
+          </div>
+          <div class="card-image-overlay m-auto">
+            <span class="card-detail-badge">Used</span>
+            <span class="card-detail-badge">$22,000.00</span>
+            <span class="card-detail-badge">8000 Kms</span>
+          </div>
+          <div class="card-body text-center">
+            <div class="ad-title m-auto">
+              <h5>Honda Accord Hybrid LT</h5>
+            </div>
+            <a class="ad-btn" href="#">View</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 filter car">
+        <div class="card rounded">
+          <div class="card-image">
+            <span class="card-notify-badge">Fully-Loaded</span>
+            <span class="card-notify-year">2017</span>
+            <img class="card-img-top img-fluid" src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=CAC80HOC021B121001.jpg&width=440&height=262" alt="Alternate Text" />
+          </div>
+          <div class="card-image-overlay m-auto">
+            <span class="card-detail-badge">Used</span>
+            <span class="card-detail-badge">$28,000.00</span>
+            <span class="card-detail-badge">13000 Kms</span>
+          </div>
+          <div class="card-body text-center">
+            <div class="ad-title m-auto">
+              <h5>Honda CIVIC HATCHBACK LS</h5>
+            </div>
+            <a class="ad-btn" href="#">View</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 filter bike">
+        <div class="card rounded">
+          <div class="card-image">
+            <span class="card-notify-badge">Price Reduced</span>
+            <span class="card-notify-year">2018</span>
+            <img class="card-img-top img-fluid" src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC091A021001.jpg&width=440&height=262" alt="Alternate Text" />
+          </div>
+          <div class="card-image-overlay m-auto">
+            <span class="card-detail-badge">Used</span>
+            <span class="card-detail-badge">$22,000.00</span>
+            <span class="card-detail-badge">8000 Kms</span>
+          </div>
+          <div class="card-body text-center">
+            <div class="ad-title m-auto">
+              <h5>Honda Accord Hybrid LT</h5>
+            </div>
+            <a class="ad-btn" href="#">View</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 filter car">
+        <div class="card rounded">
+          <div class="card-image">
+            <span class="card-notify-badge">Fully-Loaded</span>
+            <span class="card-notify-year">2017</span>
+            <img class="card-img-top img-fluid" src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=CAC80HOC021B121001.jpg&width=440&height=262" alt="Alternate Text" />
+          </div>
+          <div class="card-image-overlay m-auto">
+            <span class="card-detail-badge">Used</span>
+            <span class="card-detail-badge">$28,000.00</span>
+            <span class="card-detail-badge">13000 Kms</span>
+          </div>
+          <div class="card-body text-center">
+            <div class="ad-title m-auto">
+              <h5>Honda CIVIC HATCHBACK LS</h5>
+            </div>
+            <a class="ad-btn" href="#">View</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 filter bike">
+        <div class="card rounded">
+          <div class="card-image">
+            <span class="card-notify-badge">Price Reduced</span>
+            <span class="card-notify-year">2018</span>
+            <img class="card-img-top img-fluid" src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC091A021001.jpg&width=440&height=262" alt="Alternate Text" />
+          </div>
+          <div class="card-image-overlay m-auto">
+            <span class="card-detail-badge">Used</span>
+            <span class="card-detail-badge">$22,000.00</span>
+            <span class="card-detail-badge">8000 Kms</span>
+          </div>
+          <div class="card-body text-center">
+            <div class="ad-title m-auto">
+              <h5>Honda Accord Hybrid LT</h5>
+            </div>
+            <a class="ad-btn" href="#">View</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
+  <!-- scroll to top btn -->
   <a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i class="bi bi-arrow-bar-up"></i></a>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
   <script src="js\scroll-up.js"></script>
+
+  <!-- search bar js -->
   <script>
     function myFunction() {
       var input, filter, cards, cardContainer, h5, title, i;
@@ -262,6 +273,8 @@
       }
     }
   </script>
+
+  <!-- catagory search js -->
   <script>
     $(document).ready(function() {
 
