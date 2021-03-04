@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/login.css">
+  <title>Start Renting!</title>
+  <link rel="shortcut icon" type="image/jpg" href="images/favicon.ico" />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">
+      <img src="images/logo.png" width="100" height="30" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+      aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact Us</a>
+        </li>
+      </ul>
+      <form class="form-inline">
+        <button class="btn btn-outline-primary" type="button"><a href="login.html">Login</a></button>
+      </form>
+    </div>
+  </nav>
+
+  <main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
+    <div class="container">
+      <div class="card login-card">
+        <div class="row no-gutters">
+          <div class="col-1">
+          </div>
+          <div class="col-8">
+            <div class="row mt-1 g-1 px-1 mb-1">
+              <div class="col-md-2">
+                <div class="card-inner p-1 d-flex flex-column align-items-center">
+                  <button class="btn filter-button" onclick="viewProfile()">Profile</button>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="card-inner p-1 d-flex flex-column align-items-center">
+                  <button class="btn filter-button" onclick="viewListings()">Listings</button>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="card-inner p-1 d-flex flex-column align-items-center">
+                  <button class="btn filter-button" onclick="viewReviews()">Reviews</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Profile Content -->
+            <div id="ProfileInfo">
+              <div class="card-body">
+                <div class="row">
+                  <div id="profileinfo" class="col-sm-10">
+                    <h2 class="mb-0">Profile Information</h2>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-5">
+                    <h5 class="mb-0">Username</h5>
+                  </div>
+                  <div class="col-sm-7 text-secondary"> TesterName
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div id="profileemail" class="col-sm-5">
+                    <h5 class="mb-0">Email</h5>
+                  </div>
+                  <div class="col-sm-7 text-secondary"> testing123@gmail.com
+                  </div>
+                </div>
+                <div class="row">
+                  <div id="profileemail" class="col-sm-5">
+                    <h5 class="mb-0">Description</h5>
+                  </div>
+                  <div class="col-sm-7 text-secondary"> testing123@gmail.com
+                  </div>
+                </div>
+              </div>
+            </div>
+
+              <!-- Listings Content -->
+              <div id="ListingInfo">
+                <div class="card-body">
+                  <div class="row">
+                    <div id="profileinfo" class="col-sm-10">
+                      <h2 class="mb-0">Listings</h2>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-5">
+                      <h5 class="mb-0">Username</h5>
+                    </div>
+                    <div class="col-sm-7 text-secondary"> TesterName
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div id="profileemail" class="col-sm-5">
+                      <h5 class="mb-0">Email</h5>
+                    </div>
+                    <div class="col-sm-7 text-secondary"> testing123@gmail.com
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+                <!-- Reviews Content -->
+                <div id="ReviewInfo">
+                  <div class="card-body">
+                    <div class="row">
+                      <div id="profileinfo" class="col-sm-10">
+                        <h2 class="mb-0">Reviews</h2>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-sm-5">
+                        <h5 class="mb-0">Username</h5>
+                      </div>
+                      <div class="col-sm-7 text-secondary"> TesterName
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div id="profileemail" class="col-sm-5">
+                        <h5 class="mb-0">Email</h5>
+                      </div>
+                      <div class="col-sm-7 text-secondary"> testing123@gmail.com
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            
+              <nav class="login-card-footer-nav">
+                <a href="#!">Terms of use.</a>
+                <a href="#!">Privacy policy</a>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+  <script>
+    var profile = document.getElementById("ProfileInfo");
+    var listing = document.getElementById("ListingInfo");
+    var reviews = document.getElementById("ReviewInfo");
+
+    profile.style.display = "block";
+    listing.style.display = "none";
+    reviews.style.display = "none";
+
+
+    // Codes below can be optimized
+    function viewProfile() {
+      if (profile.style.display == "none") {
+        profile.style.display = "block";
+      }
+      if (listing.style.display == "block") {
+        listing.style.display = "none";
+      }
+      if (reviews.style.display == "block") {
+        reviews.style.display = "none";
+      }
+    }
+
+    function viewListings() {
+      if (listing.style.display == "none") {
+        listing.style.display = "block";
+      }
+      if (profile.style.display == "block") {
+        profile.style.display = "none";
+      }
+      if (reviews.style.display == "block") {
+        reviews.style.display = "none";
+      }
+    }
+
+    function viewReviews(x) {
+      if (reviews.style.display == "none") {
+        reviews.style.display = "block";
+      }
+      if (profile.style.display == "block") {
+        profile.style.display = "none";
+      }
+      if (listing.style.display == "block") {
+        listing.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+
+</html>
