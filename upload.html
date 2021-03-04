@@ -9,7 +9,17 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/upload.css">
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link rel="stylesheet" href="css/image-uploader.css">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/image-uploader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+  <!--Material Design Iconic Font-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </link>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
   <!-- title and favicon -->
@@ -17,7 +27,7 @@
   <link rel="shortcut icon" type="image/jpg" href="images/favicon.ico" />
 </head>
 
-<body>
+<body style="background-color:#0275d8" ;>
 
   <!-- navbar -->
   <nav style="background-color:white;" class="navbar navbar-expand-lg navbar-light fixed-top">
@@ -43,40 +53,71 @@
     </div>
   </nav>
 
-  <form id="regForm" action="/action_page.php">
-    <h1>Register:</h1>
-    <!-- One "tab" for each step in the form: -->
-    <div class="tab">Name:
-      <p><input placeholder="First name..." oninput="this.className = ''" name="fname"></p>
-      <p><input placeholder="Last name..." oninput="this.className = ''" name="lname"></p>
-    </div>
-    <div class="tab">Contact Info:
-      <p><input placeholder="E-mail..." oninput="this.className = ''" name="email"></p>
-      <p><input placeholder="Phone..." oninput="this.className = ''" name="phone"></p>
-    </div>
-    <div class="tab">Birthday:
-      <p><input placeholder="dd" oninput="this.className = ''" name="dd"></p>
-      <p><input placeholder="mm" oninput="this.className = ''" name="nn"></p>
-      <p><input placeholder="yyyy" oninput="this.className = ''" name="yyyy"></p>
-    </div>
-    <div class="tab">Login Info:
-      <p><input placeholder="Username..." oninput="this.className = ''" name="uname"></p>
-      <p><input placeholder="Password..." oninput="this.className = ''" name="pword" type="password"></p>
-    </div>
-    <div style="overflow:auto;">
-      <div style="float:right;">
-        <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-        <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+  <div class="container d-flex align-items-center min-vh-600">
+    <form style="height: 30rem;" class="min-vh-600" id="regForm" action="/action_page.php">
+      <!-- One "tab" for each step in the form: -->
+      <div class="tab">
+        <h4>Step 1: Upload images of your beloved item:</h4>
+        <br>
+        <br>
+        <div class="input-images"></div>
+        <br>
+        <br>
       </div>
-    </div>
-    <!-- Circles which indicates the steps of the form: -->
-    <div style="text-align:center;margin-top:40px;">
-      <span class="step"></span>
-      <span class="step"></span>
-      <span class="step"></span>
-      <span class="step"></span>
-    </div>
-  </form>
+      <div class="tab">
+        <h4>Step 2: Looking good! Now enter name and description:</h4>
+        <br />
+        <br>
+        <p><input placeholder="Name" oninput="this.className = ''" name="name"></p>
+        <p><input placeholder="Description" oninput="this.className = ''" name="description"></p>
+        <br />
+        <br />
+        <br />
+      </div>
+      <div class="tab">
+        <h4>Step 3: Nice! Now enter the rental rate:</h4>
+        <br />
+        <br />
+        <div style="width: 30rem;" class="input-group mx-auto">
+          <div class="input-group-prepend">
+            <span class="input-group-text">$</span>
+          </div>
+          <input type="text" class="form-control" aria-label="Text input with dropdown button">
+          <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">per hour</button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#">per day</a></li>
+            <li><a class="dropdown-item" href="#">per week</a></li>
+            <li><a class="dropdown-item" href="#">per month</a></li>
+          </ul>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+      </div>
+      <div class="tab">Login Info:
+        <p><input placeholder="Username..." oninput="this.className = ''" name="uname"></p>
+        <p><input placeholder="Password..." oninput="this.className = ''" name="pword" type="password"></p>
+      </div>
+      <div style="overflow:auto;">
+        <div style="float:right;">
+          <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+          <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+        </div>
+      </div>
+      <!-- Circles which indicates the steps of the form: -->
+      <div style="text-align:center;margin-top:40px;">
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+      </div>
+    </form>
+  </div>
 
   <script>
     var currentTab = 0; // Current tab is set to be the first tab (0)
@@ -151,6 +192,14 @@
       //... and adds the "active" class on the current step:
       x[n].className += " active";
     }
+  </script>
+
+  <script>
+    $(document).ready(function() {
+
+      $('.input-images').imageUploader();
+
+    });
   </script>
 
 </body>
