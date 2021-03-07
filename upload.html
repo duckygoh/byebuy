@@ -10,12 +10,6 @@
   <!-- CSS -->
   <link rel="stylesheet" href="css/upload.css">
   <link rel="stylesheet" href="css/image-uploader.css">
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script type="text/javascript" src="js/image-uploader.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-
-  <!--Material Design Iconic Font-->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -28,7 +22,6 @@
 </head>
 
 <body style="background-color:#0275d8" ;>
-
   <!-- navbar -->
   <nav style="background-color:white;" class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container-md">
@@ -56,7 +49,7 @@
 
   </div>
   <div class="container d-flex align-items-center min-vh-600">
-    <form style="height: 30rem;" class="min-vh-600" id="regForm">
+    <form style="height: 40rem;" class="min-vh-600" id="regForm">
       <!-- One "tab" for each step in the form: -->
       <div class="tab">
         <h4>Step 1: Upload images of your beloved item:</h4>
@@ -72,8 +65,15 @@
         <br>
         <p><input placeholder="Name" oninput="this.className = ''" name="name"></p>
         <p><input placeholder="Description" oninput="this.className = ''" name="description"></p>
-        <br />
-        <br />
+        <label for="list">Category:</label>
+        <p><select name="list" id="cars">
+            <option value="camera">Camera</option>
+            <option value="home">Home Appliances</option>
+            <option value="man">Man's Fashion</option>
+            <option value="woman">Woman's Fashion</option>
+            <option value="travel">Travel Essentials</option>
+            <option value="book">Books</option>
+          </select></p>
         <br />
       </div>
       <div class="tab">
@@ -92,7 +92,6 @@
             <li><a class="dropdown-item" href="#">per month</a></li>
           </ul>
         </div>
-
         <br>
         <br>
         <br>
@@ -115,6 +114,12 @@
       </div>
     </form>
   </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/image-uploader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
   <script>
     var currentTab = 0; // Current tab is set to be the first tab (0)
@@ -151,19 +156,18 @@
       // Increase or decrease the current tab by 1:
       currentTab = currentTab + n;
       // if you have reached the end of the form...
-      if (currentTab == 3){
+      if (currentTab == 3) {
         showTab(2);
       }
       if (currentTab == 2) {
         showTab(2);
         // ... the form gets submitted:
         $('#nextBtn').on('click', function(event) {
-          window.alert();
           // disable button
           $(this).prop("disabled", true);
 
           // add spinner to button for some time
-          $(this).html('<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span> Logging in...');
+          $(this).html('<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span> Submitting...');
 
           var _self = $(this);
 
@@ -212,7 +216,6 @@
       x[n].className += " active";
     }
   </script>
-
   <script>
     $(document).ready(function() {
 
@@ -220,13 +223,6 @@
 
     });
   </script>
-  <script>
-  $(document).ready(function() {
-
-
-  });
-  </script>
-
 </body>
 
 </html>
