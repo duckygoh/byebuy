@@ -52,9 +52,11 @@
       </div>
     </div>
   </nav>
+  <div class="alert-container">
 
+  </div>
   <div class="container d-flex align-items-center min-vh-600">
-    <form style="height: 30rem;" class="min-vh-600" id="regForm" action="/action_page.php">
+    <form style="height: 30rem;" class="min-vh-600" id="regForm">
       <!-- One "tab" for each step in the form: -->
       <div class="tab">
         <h4>Step 1: Upload images of your beloved item:</h4>
@@ -99,10 +101,6 @@
         <br>
         <br>
       </div>
-      <div class="tab">Login Info:
-        <p><input placeholder="Username..." oninput="this.className = ''" name="uname"></p>
-        <p><input placeholder="Password..." oninput="this.className = ''" name="pword" type="password"></p>
-      </div>
       <div style="overflow:auto;">
         <div style="float:right;">
           <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
@@ -111,7 +109,6 @@
       </div>
       <!-- Circles which indicates the steps of the form: -->
       <div style="text-align:center;margin-top:40px;">
-        <span class="step"></span>
         <span class="step"></span>
         <span class="step"></span>
         <span class="step"></span>
@@ -126,6 +123,8 @@
     function showTab(n) {
       // This function will display the specified tab of the form...
       var x = document.getElementsByClassName("tab");
+      console.log(x.length);
+      console.log(currentTab);
       x[n].style.display = "block";
       //... and fix the Previous/Next buttons:
       if (n == 0) {
@@ -133,7 +132,7 @@
       } else {
         document.getElementById("prevBtn").style.display = "inline";
       }
-      if (n == (x.length - 1)) {
+      if (n == 2) {
         document.getElementById("nextBtn").innerHTML = "Submit";
       } else {
         document.getElementById("nextBtn").innerHTML = "Next";
@@ -152,10 +151,27 @@
       // Increase or decrease the current tab by 1:
       currentTab = currentTab + n;
       // if you have reached the end of the form...
-      if (currentTab >= x.length) {
+      if (currentTab == 2) {
+        showTab(2);
         // ... the form gets submitted:
-        document.getElementById("regForm").submit();
-        return false;
+        $('#nextBtn').on('click', function(event) {
+          window.alert();
+          // disable button
+          $(this).prop("disabled", true);
+
+          // add spinner to button for some time
+          $(this).html('<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span> Logging in...');
+
+          var _self = $(this);
+
+          setTimeout(function() {
+            _self.html('Success');
+          }, 3000);
+
+          setTimeout(function() {
+            window.location.href = "home.html";
+          }, 6000);
+        });
       }
       // Otherwise, display the correct tab:
       showTab(currentTab);
@@ -200,6 +216,12 @@
       $('.input-images').imageUploader();
 
     });
+  </script>
+  <script>
+  $(document).ready(function() {
+
+
+  });
   </script>
 
 </body>
