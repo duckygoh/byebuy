@@ -55,3 +55,63 @@ body{
 .checked {
     color: orange;
 }
+
+.btn-background-rentNow {
+    width: 130px;
+    background-color: #f44336;
+    border-radius: 4px;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.btn-background-rentNow:hover{
+      background-color: #A9A9A9;
+      color: #000; 
+}
+
+.btn-background-chat {
+    width: 130px;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.btn-background-chat:hover{
+      background-color: #A9A9A9;
+      color: #000; 
+}
+
+.btn-background-send {
+    width: 166px;
+    background-color: #32CD32;
+    border-radius: 4px;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.btn-background-send:hover{
+      background-color: #A9A9A9;
+      color: #000; 
+}
+
+textarea {
+    width: 105%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    resize: initial;
+  }
+
