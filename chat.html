@@ -156,25 +156,13 @@
         <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_01_green.jpg" alt="avatar" />
 
         <div class="chat-about">
-          <div class="chat-with">Chat with Vincent Porter</div>
-          <div class="chat-num-messages">already 1 902 messages</div>
+          <div class="chat-with">Chat with Vincent</div>
         </div>
         <i class="fa fa-star"></i>
       </div> <!-- end chat-header -->
 
       <div class="chat-history">
         <ul class="no-bullets">
-          <li class="clearfix">
-            <div class="message-data align-right">
-              <span class="message-data-time">10:10 AM, Today</span> &nbsp; &nbsp;
-              <span class="message-data-name">Olia</span> <i class="fa fa-circle me"></i>
-
-            </div>
-            <div class="message other-message float-right">
-              Hi Vincent, how are you? How is the project coming along?
-            </div>
-          </li>
-
           <li>
             <div class="message-data">
               <span class="message-data-name"><i class="fa fa-circle online"></i> Vincent</span>
@@ -233,7 +221,7 @@
     <li class="clearfix">
     <div class="message-data align-right">
       <span class="message-data-time" >{{time}}, Today</span> &nbsp; &nbsp;
-      <span class="message-data-name" >Olia</span> <i class="fa fa-circle me"></i>
+      <span class="message-data-name" >Raymond</span> <i class="fa fa-circle me"></i>
     </div>
     <div class="message other-message float-right">
       {{messageOutput}}
@@ -255,16 +243,16 @@
 
   <script>
     (function() {
+      var count = 0;
 
       var chat = {
         messageToSend: '',
         messageResponses: [
-          'Why did the web developer leave the restaurant? Because of the table layout.',
-          'How do you comfort a JavaScript bug? You console it.',
-          'An SQL query enters a bar, approaches two tables and asks: "May I join you?"',
-          'What is the most used language in programming? Profanity.',
-          'What is the object-oriented way to become wealthy? Inheritance.',
-          'An SEO expert walks into a bar, bars, pub, tavern, public house, Irish pub, drinks, beer, alcohol'
+          'Hello',
+          'Hello',
+          'Yes, Item is available.',
+          '20 per day, isit okay?',
+          'My number is 91234567'
         ],
         init: function() {
           this.cacheDOM();
@@ -297,7 +285,7 @@
             // responses
             var templateResponse = Handlebars.compile($("#message-response-template").html());
             var contextResponse = {
-              response: this.getRandomItem(this.messageResponses),
+              response: (this.messageResponses[count]),
               time: this.getCurrentTime()
             };
 
@@ -317,6 +305,8 @@
         addMessageEnter: function(event) {
           // enter was pressed
           if (event.keyCode === 13) {
+            count++;
+            console.log(count);
             this.addMessage();
           }
         },
