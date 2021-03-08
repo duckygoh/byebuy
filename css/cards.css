@@ -110,6 +110,13 @@
   right: 100px;
 }
 
+.chat-btn {
+  position: fixed;
+  height: 45px;
+  bottom: 25px;
+  left: 50px;
+}
+
 a {
   color: white;
 }
