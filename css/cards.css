@@ -1,10 +1,12 @@
-.card{
-    margin-bottom: 30px;
+.card {
+  margin-bottom: 30px;
 }
 
 .card-img-top {
-    max-height: 20vh; /*not want to take all vertical space*/
-    object-fit: contain;/*show all image, autosized, no cut, in available space*/
+  max-height: 20vh;
+  /*not want to take all vertical space*/
+  object-fit: contain;
+  /*show all image, autosized, no cut, in available space*/
 }
 
 #ads {
@@ -99,4 +101,15 @@
   bottom: 25px;
   right: 25px;
   display: none;
+}
+
+.upload-btn {
+  position: fixed;
+  height: 45px;
+  bottom: 25px;
+  right: 100px;
+}
+
+a {
+  color: white;
 }

@@ -38,7 +38,7 @@ input.invalid {
 }
 
 button {
-  background-color: #4CAF50;
+  background-color: #0275d8;
   color: #ffffff;
   border: none;
   padding: 10px 20px;
@@ -73,7 +73,7 @@ button:hover {
 
 /* Mark the steps that are finished and valid: */
 .step.finish {
-  background-color: #4CAF50;
+  background-color: #0275d8;
 }
 
 .imagePreview {
