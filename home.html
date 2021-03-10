@@ -1,244 +1,233 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/search-bar.css">
-  <link rel="stylesheet" href="css/cards.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-
-  <!-- title and favicon -->
-  <title>Start Renting!</title>
-  <link rel="shortcut icon" type="image/jpg" href="images/favicon.ico" />
-</head>
-
-<body>
-
-  <!-- navbar -->
-  <nav style="background-color:white;" class="navbar navbar-expand-lg navbar-light fixed-top">
-    <div class="container-md">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" href="home.html">
-        <img src=" images/logo.png" width="100" height="30" alt="">
-      </a>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        </ul>
-        <form class="form-inline d-grid gap-2 d-md-block">
-          <a href="profile.html">
-            <button type="button" class="btn btn-outline-primary">Profile</button>
-          </a>
-          <a href="chat.html">
-            <button type="button" class="btn btn-outline-success"><i class="bi bi-chat"></i> Chat</button>
-          </a>
-          <a href="login.html">
-            <button type="button" class="btn btn-outline-danger">Logout</button>
-          </a>
-        </form>
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- CSS -->
+      <link rel="stylesheet" href="css/search-bar.css">
+      <link rel="stylesheet" href="css/cards.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+      <!-- title and favicon -->
+      <title>Start Renting!</title>
+      <link rel="shortcut icon" type="image/jpg" href="images/favicon.ico" />
+   </head>
+   <body>
+      <!-- navbar -->
+      <nav style="background-color:white;" class="navbar navbar-expand-lg navbar-light fixed-top">
+         <div class="container-md">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="home.html">
+            <img src=" images/logo.png" width="100" height="30" alt="">
+            </a>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+               </ul>
+               <form class="form-inline d-grid gap-2 d-md-block">
+                  <a href="profile.html">
+                  <button type="button" class="btn btn-outline-primary">Profile</button>
+                  </a>
+                  <a href="chat.html">
+                  <button type="button" class="btn btn-outline-success"><i class="bi bi-chat"></i> Chat</button>
+                  </a>
+                  <a href="login.html">
+                  <button type="button" class="btn btn-outline-danger">Logout</button>
+                  </a>
+               </form>
+            </div>
+         </div>
+      </nav>
+      <!-- search bar with catagory icons -->
+      <div class="container mt-4">
+         <div class="row d-flex justify-content-center">
+            <div style="margin-top:50px;" class="col-md-9">
+               <div class="card p-4 mt-3">
+                  <h3 class="heading mt-5 text-center">Hi! How can we help You?</h3>
+                  <div class="d-flex justify-content-center px-5">
+                     <div class="search"> <input type="text" id="myFilter" onkeyup="myFunction()" class="search-input" placeholder="Search..." name=""> <a href="#" class="search-icon"> <i class="bi bi-search"></i> </a> </div>
+                  </div>
+                  <div class="row mt-4 g-1 px-4 mb-5">
+                     <div class="col-md-2">
+                        <div class="card-inner p-3 d-flex flex-column align-items-center">
+                           <button class="btn filter-button" data-filter="all"><img src="images\icons\box.png" width="50"></i></button>
+                           <div class="text-center mg-text"> <span class="mg-text">All Items</span> </div>
+                        </div>
+                     </div>
+                     <div class="col-md-2">
+                        <div class="card-inner p-3 d-flex flex-column align-items-center">
+                           <button class="btn filter-button" data-filter="camera"><img src="images\icons\dslr-camera.png" width="50"></i></button>
+                           <div class="text-center mg-text"> <span class="mg-text">Camera</span> </div>
+                        </div>
+                     </div>
+                     <div class="col-md-2">
+                        <div class="card-inner p-3 d-flex flex-column align-items-center">
+                           <button class="btn filter-button" data-filter="home"><img src="images\icons\vaccum-cleaner.png" width="50"></i></button>
+                           <div class="text-center mg-text"> <span class="mg-text">Home Appliances</span> </div>
+                        </div>
+                     </div>
+                     <div class="col-md-2">
+                        <div class="card-inner p-3 d-flex flex-column align-items-center">
+                           <button class="btn filter-button" data-filter="fashion"><img src="images\icons\cocktail-dress.png" width="50"></i></button>
+                           <div class="text-center mg-text"> <span class="mg-text">Fashion</span> </div>
+                        </div>
+                     </div>
+                     <div class="col-md-2">
+                        <div class="card-inner p-3 d-flex flex-column align-items-center">
+                           <button class="btn filter-button" data-filter="travel"><img src="images\icons\suitcases.png" width="50"></i></button>
+                           <div class="text-center mg-text"> <span class="mg-text">Travel Essentials</span> </div>
+                        </div>
+                     </div>
+                     <div class="col-md-2">
+                        <div class="card-inner p-3 d-flex flex-column align-items-center">
+                           <button class="btn filter-button" data-filter="book"><img src="images\icons\open-book.png" width="50"></i></button>
+                           <div class="text-center mg-text"> <span class="mg-text">Books</span> </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
       </div>
-    </div>
-  </nav>
-
-  <!-- search bar with catagory icons -->
-  <div class="container mt-4">
-    <div class="row d-flex justify-content-center">
-      <div style="margin-top:50px;" class="col-md-9">
-        <div class="card p-4 mt-3">
-          <h3 class="heading mt-5 text-center">Hi! How can we help You?</h3>
-          <div class="d-flex justify-content-center px-5">
-            <div class="search"> <input type="text" id="myFilter" onkeyup="myFunction()" class="search-input" placeholder="Search..." name=""> <a href="#" class="search-icon"> <i class="bi bi-search"></i> </a> </div>
-          </div>
-          <div class="row mt-4 g-1 px-4 mb-5">
-            <div class="col-md-2">
-              <div class="card-inner p-3 d-flex flex-column align-items-center">
-                <button class="btn filter-button" data-filter="all"><img src="images\icons\box.png" width="50"></i></button>
-                <div class="text-center mg-text"> <span class="mg-text">All Items</span> </div>
-              </div>
+      <!-- listing cards -->
+      <div class="container">
+         <br>
+         <h2>Latest Drop</h2>
+         <br>
+         <div class="row" id="ads" style="display: none">
+            <!-- Category Card -->
+            <div class="col-md-4 filter camera">
+               <div class="card rounded">
+                  <div class="card-image">
+                     <span class="card-notify-badge">Highly-Rated</span>
+                     <img class="card-img-top img-fluid" src="https://media.karousell.com/media/photos/products/2021/2/19/xf_10_digital_camera_black__go_1613714845_92fa320a_progressive" alt="Alternate Text" />
+                  </div>
+                  <div class="card-image-overlay m-auto">
+                     <span class="card-detail-badge">$20.00 / day</span>
+                  </div>
+                  <div class="card-body text-center">
+                     <div class="ad-title m-auto">
+                        <h5>XF 10 Digital Camera</h5>
+                     </div>
+                     <a class="ad-btn" href="view.html">View</a>
+                  </div>
+               </div>
             </div>
-            <div class="col-md-2">
-              <div class="card-inner p-3 d-flex flex-column align-items-center">
-                <button class="btn filter-button" data-filter="camera"><img src="images\icons\dslr-camera.png" width="50"></i></button>
-                <div class="text-center mg-text"> <span class="mg-text">Camera</span> </div>
-              </div>
+            <div class="col-md-4 filter camera all">
+               <div class="card rounded">
+                  <div class="card-image">
+                     <span class="card-notify-badge">Like-New</span>
+                     <img class="card-img-top img-fluid" src="https://media.karousell.com/media/photos/products/2021/2/27/sony_rx_100_m3_1614399109_2e7ce6c9_progressive.jpg" alt="Alternate Text" />
+                  </div>
+                  <div class="card-image-overlay m-auto">
+                     <span class="card-detail-badge">$17.00 / day</span>
+                  </div>
+                  <div class="card-body text-center">
+                     <div class="ad-title m-auto">
+                        <h5>Sony RX 100 Mark 3</h5>
+                     </div>
+                     <a class="ad-btn" href="#">View</a>
+                  </div>
+               </div>
             </div>
-            <div class="col-md-2">
-              <div class="card-inner p-3 d-flex flex-column align-items-center">
-                <button class="btn filter-button" data-filter="home"><img src="images\icons\vaccum-cleaner.png" width="50"></i></button>
-                <div class="text-center mg-text"> <span class="mg-text">Home Appliances</span> </div>
-              </div>
+            <div class="col-md-4 filter camera all">
+               <div class="card rounded">
+                  <div class="card-image">
+                     <span class="card-notify-badge">Price Reduced</span>
+                     <img class="card-img-top img-fluid" src="https://media.karousell.com/media/photos/products/2021/3/2/dc101_24mp_16x_zoom_focus_1080_1614716863_9a653343_progressive.jpg" alt="Alternate Text" />
+                  </div>
+                  <div class="card-image-overlay m-auto">
+                     <span class="card-detail-badge">$5.00 / day</span>
+                  </div>
+                  <div class="card-body text-center">
+                     <div class="ad-title m-auto">
+                        <h5>DC101 24mp</h5>
+                     </div>
+                     <a class="ad-btn" href="#">View</a>
+                  </div>
+               </div>
             </div>
-            <div class="col-md-2">
-              <div class="card-inner p-3 d-flex flex-column align-items-center">
-                <button class="btn filter-button" data-filter="fashion"><img src="images\icons\cocktail-dress.png" width="50"></i></button>
-                <div class="text-center mg-text"> <span class="mg-text">Fashion</span> </div>
-              </div>
+            <div class="col-md-4 filter home all">
+               <div class="card rounded">
+                  <div class="card-image">
+                     <span class="card-notify-badge">Price Reduced</span>
+                     <img class="card-img-top img-fluid" src="https://media.karousell.com/media/photos/products/2021/3/2/heavy_duty_ladder_limit_weight_1614675772_11cda45c_progressive" alt="Alternate Text" />
+                  </div>
+                  <div class="card-image-overlay m-auto">
+                     <span class="card-detail-badge">$10.00 /day</span>
+                  </div>
+                  <div class="card-body text-center">
+                     <div class="ad-title m-auto">
+                        <h5>Ladder Heavy Duty</h5>
+                     </div>
+                     <a class="ad-btn" href="#">View</a>
+                  </div>
+               </div>
             </div>
-            <div class="col-md-2">
-              <div class="card-inner p-3 d-flex flex-column align-items-center">
-                <button class="btn filter-button" data-filter="travel"><img src="images\icons\suitcases.png" width="50"></i></button>
-                <div class="text-center mg-text"> <span class="mg-text">Travel Essentials</span> </div>
-              </div>
+            <div class="col-md-4 filter home all">
+               <div class="card rounded">
+                  <div class="card-image">
+                     <span class="card-notify-badge">Highly-Rated</span>
+                     <img class="card-img-top img-fluid" src="https://media.karousell.com/media/photos/products/2021/3/3/bosch_gsb_180li_professional_c_1614759211_68a059ab_progressive" alt="Alternate Text" />
+                  </div>
+                  <div class="card-image-overlay m-auto">
+                     <span class="card-detail-badge">$5.00 / day</span>
+                  </div>
+                  <div class="card-body text-center">
+                     <div class="ad-title m-auto">
+                        <h5>BOSCH GSB Cordless Impact Drill</h5>
+                     </div>
+                     <a class="ad-btn" href="#">View</a>
+                  </div>
+               </div>
             </div>
-            <div class="col-md-2">
-              <div class="card-inner p-3 d-flex flex-column align-items-center">
-                <button class="btn filter-button" data-filter="book"><img src="images\icons\open-book.png" width="50"></i></button>
-                <div class="text-center mg-text"> <span class="mg-text">Books</span> </div>
-              </div>
+            <div class="col-md-4 filter home all">
+               <div class="card rounded">
+                  <div class="card-image">
+                     <span class="card-notify-badge">Fully-Loaded</span>
+                     <img class="card-img-top img-fluid" src="https://media.karousell.com/media/photos/products/2021/3/5/freedelivery_screwdriver_teccp_1614975767_8b7238ad_progressive" alt="Alternate Text" />
+                  </div>
+                  <div class="card-image-overlay m-auto">
+                     <span class="card-detail-badge">$20.00 / week</span>
+                  </div>
+                  <div class="card-body text-center">
+                     <div class="ad-title m-auto">
+                        <h5>TECCPO Rechargeable Battery-Powered</h5>
+                     </div>
+                     <a class="ad-btn" href="#">View</a>
+                  </div>
+               </div>
             </div>
-          </div>
-        </div>
+            <div class="col-md-4 filter travel all">
+               <div class="card rounded">
+                  <div class="card-image">
+                     <span class="card-notify-badge">Price Reduced</span>
+                     <img class="card-img-top img-fluid" src="https://media.karousell.com/media/photos/products/2021/3/3/brand_new_delsey_titanium_carr_1614763389_d1c8bda2_progressive" alt="Alternate Text" />
+                  </div>
+                  <div class="card-image-overlay m-auto">
+                     <span class="card-detail-badge">$20.00 / week</span>
+                  </div>
+                  <div class="card-body text-center">
+                     <div class="ad-title m-auto">
+                        <h5>Delsey Carry-On Spinner Luggage</h5>
+                     </div>
+                     <a class="ad-btn" href="#">View</a>
+                  </div>
+               </div>
+            </div>
+         </div>
       </div>
-    </div>
-  </div>
-
-  <!-- listing cards -->
-  <div class="container">
-    <br>
-    <h2>Latest Drop</h2>
-    <br>
-    <div class="row" id="ads" style="display: none">
-      <!-- Category Card -->
-      <div class="col-md-4 filter camera">
-        <div class="card rounded">
-          <div class="card-image">
-            <span class="card-notify-badge">Highly-Rated</span>
-            <img class="card-img-top img-fluid" src="https://media.karousell.com/media/photos/products/2021/2/19/xf_10_digital_camera_black__go_1613714845_92fa320a_progressive" alt="Alternate Text" />
-          </div>
-          <div class="card-image-overlay m-auto">
-            <span class="card-detail-badge">$20.00 / day</span>
-          </div>
-          <div class="card-body text-center">
-            <div class="ad-title m-auto">
-              <h5>XF 10 Digital Camera</h5>
-            </div>
-            <a class="ad-btn" href="view.html">View</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 filter camera all">
-        <div class="card rounded">
-          <div class="card-image">
-            <span class="card-notify-badge">Like-New</span>
-            <img class="card-img-top img-fluid" src="https://media.karousell.com/media/photos/products/2021/2/27/sony_rx_100_m3_1614399109_2e7ce6c9_progressive.jpg" alt="Alternate Text" />
-          </div>
-          <div class="card-image-overlay m-auto">
-            <span class="card-detail-badge">$17.00 / day</span>
-          </div>
-          <div class="card-body text-center">
-            <div class="ad-title m-auto">
-              <h5>Sony RX 100 Mark 3</h5>
-            </div>
-            <a class="ad-btn" href="#">View</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 filter camera all">
-        <div class="card rounded">
-          <div class="card-image">
-            <span class="card-notify-badge">Price Reduced</span>
-            <img class="card-img-top img-fluid" src="https://media.karousell.com/media/photos/products/2021/3/2/dc101_24mp_16x_zoom_focus_1080_1614716863_9a653343_progressive.jpg" alt="Alternate Text" />
-          </div>
-          <div class="card-image-overlay m-auto">
-            <span class="card-detail-badge">$5.00 / day</span>
-          </div>
-          <div class="card-body text-center">
-            <div class="ad-title m-auto">
-              <h5>DC101 24mp</h5>
-            </div>
-            <a class="ad-btn" href="#">View</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 filter home all">
-        <div class="card rounded">
-          <div class="card-image">
-            <span class="card-notify-badge">Price Reduced</span>
-            <img class="card-img-top img-fluid" src="https://media.karousell.com/media/photos/products/2021/3/2/heavy_duty_ladder_limit_weight_1614675772_11cda45c_progressive" alt="Alternate Text" />
-          </div>
-          <div class="card-image-overlay m-auto">
-            <span class="card-detail-badge">$10.00 /day</span>
-          </div>
-          <div class="card-body text-center">
-            <div class="ad-title m-auto">
-              <h5>Ladder Heavy Duty</h5>
-            </div>
-            <a class="ad-btn" href="#">View</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 filter home all">
-        <div class="card rounded">
-          <div class="card-image">
-            <span class="card-notify-badge">Highly-Rated</span>
-            <img class="card-img-top img-fluid" src="https://media.karousell.com/media/photos/products/2021/3/3/bosch_gsb_180li_professional_c_1614759211_68a059ab_progressive" alt="Alternate Text" />
-          </div>
-          <div class="card-image-overlay m-auto">
-            <span class="card-detail-badge">$5.00 / day</span>
-          </div>
-          <div class="card-body text-center">
-            <div class="ad-title m-auto">
-              <h5>BOSCH GSB Cordless Impact Drill</h5>
-            </div>
-            <a class="ad-btn" href="#">View</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 filter home all">
-        <div class="card rounded">
-          <div class="card-image">
-            <span class="card-notify-badge">Fully-Loaded</span>
-            <img class="card-img-top img-fluid" src="https://media.karousell.com/media/photos/products/2021/3/5/freedelivery_screwdriver_teccp_1614975767_8b7238ad_progressive" alt="Alternate Text" />
-          </div>
-          <div class="card-image-overlay m-auto">
-            <span class="card-detail-badge">$20.00 / week</span>
-          </div>
-          <div class="card-body text-center">
-            <div class="ad-title m-auto">
-              <h5>TECCPO Rechargeable Battery-Powered</h5>
-            </div>
-            <a class="ad-btn" href="#">View</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 filter travel all">
-        <div class="card rounded">
-          <div class="card-image">
-            <span class="card-notify-badge">Price Reduced</span>
-            <img class="card-img-top img-fluid" src="https://media.karousell.com/media/photos/products/2021/3/3/brand_new_delsey_titanium_carr_1614763389_d1c8bda2_progressive" alt="Alternate Text" />
-          </div>
-          <div class="card-image-overlay m-auto">
-            <span class="card-detail-badge">$20.00 / week</span>
-          </div>
-          <div class="card-body text-center">
-            <div class="ad-title m-auto">
-              <h5>Delsey Carry-On Spinner Luggage</h5>
-            </div>
-            <a class="ad-btn" href="#">View</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- scroll to top btn -->
-  <a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i class="bi bi-arrow-bar-up"></i></a>
-  <button type="button" class="btn btn-danger upload-btn"><a href="upload.html" style = "color:white;">List Item!</a></button>
-
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-  <script src="js\scroll-up.js"></script>
-  <script src="js\home.js"></script>
-
-</body>
-
+      <!-- scroll to top btn -->
+      <a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i class="bi bi-arrow-bar-up"></i></a>
+      <button type="button" class="btn btn-danger upload-btn"><a href="upload.html" style = "color:white;">List Item!</a></button>
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+      <script src="js\scroll-up.js"></script>
+      <script src="js\home.js"></script>
+   </body>
 </html>
