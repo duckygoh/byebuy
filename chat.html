@@ -29,6 +29,9 @@
                         <a href="profile.html">
                         <button type="button" class="btn btn-outline-primary">Profile</button>
                         </a>
+                        <a href="chat.html">
+                        <button type="button" class="btn btn-outline-success"><i class="bi bi-chat"></i> Chat</button>
+                        </a>
                         <a href="login.html">
                         <button type="button" class="btn btn-outline-danger">Logout</button>
                         </a>
@@ -184,7 +187,6 @@
                 messageResponses: [
                   'Hello',
                   'hihi',
-                  'hihi',
                   'Yes, Item is available.',
                   '20 per day, isit okay?',
                   'My number is 91234567',
@@ -229,6 +231,7 @@
 
                     if(user_count == 1){
                       document.getElementById("other-message").style.fontWeight = "bold";
+                      user_count++;
                     }
 
 
@@ -247,7 +250,6 @@
                   if (user_count == 1) {
                     this.messageToSend = someText;
                     this.render();
-                    count++;
                     this.messageToSend = 'hi'
                     this.render();
                   } else {

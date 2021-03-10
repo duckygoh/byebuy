@@ -1,227 +1,221 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
-
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/upload.css">
-  <link rel="stylesheet" href="css/image-uploader.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></link>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-
-  <!-- title and favicon -->
-  <title>Start Renting!</title>
-  <link rel="shortcut icon" type="image/jpg" href="images/favicon.ico" />
-</head>
-
-<body style="background-color:#0275d8" ;>
-  <!-- navbar -->
-  <nav style="background-color:white;" class="navbar navbar-expand-lg navbar-light fixed-top">
-    <div class="container-md">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">
-        <img src=" images/logo.png" width="100" height="30" alt="">
-      </a>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        </ul>
-        <form class="form-inline d-grid gap-2 d-md-block">
-          <a href="profile.html">
-            <button type="button" class="btn btn-outline-primary">Profile</button>
-          </a>
-          <a href="login.html">
-            <button type="button" class="btn btn-outline-danger">Logout</button>
-          </a>
-        </form>
-      </div>
-    </div>
-  </nav>
-  <div class="alert-container">
-
-  </div>
-  <div class="container d-flex align-items-center min-vh-600">
-    <form style="height: 40rem;" class="min-vh-600" id="regForm">
-      <!-- One "tab" for each step in the form: -->
-      <div class="tab">
-        <h4>Step 1: Upload images of your beloved item:</h4>
-        <br>
-        <br>
-        <div class="input-images"></div>
-        <br>
-        <br>
-      </div>
-      <div class="tab">
-        <h4>Step 2: Looking good! Now enter name and description:</h4>
-        <br />
-        <br>
-        <p><input placeholder="Name" oninput="this.className = ''" name="name"></p>
-        <p><input placeholder="Description" oninput="this.className = ''" name="description"></p>
-        <label for="list">Category:</label>
-        <p><select name="list" id="cars">
-            <option value="camera">Camera</option>
-            <option value="home">Home Appliances</option>
-            <option value="man">Man's Fashion</option>
-            <option value="woman">Woman's Fashion</option>
-            <option value="travel">Travel Essentials</option>
-            <option value="book">Books</option>
-          </select></p>
-        <br />
-      </div>
-      <div class="tab">
-        <h4>Step 3: Nice! Now enter the rental rate:</h4>
-        <br />
-        <br />
-        <div style="width: 30rem;" class="input-group mx-auto">
-          <div class="input-group-prepend">
-            <span class="input-group-text">$</span>
-          </div>
-          <input type="text" class="form-control" aria-label="Text input with dropdown button">
-          <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">per hour</button>
-          <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item" href="#">per day</a></li>
-            <li><a class="dropdown-item" href="#">per week</a></li>
-            <li><a class="dropdown-item" href="#">per month</a></li>
-          </ul>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/upload.css">
+        <link rel="stylesheet" href="css/image-uploader.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        </link>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <!-- title and favicon -->
+        <title>Start Renting!</title>
+        <link rel="shortcut icon" type="image/jpg" href="images/favicon.ico" />
+    </head>
+    <body style="background-color:#0275d8" ;>
+        <!-- navbar -->
+        <nav style="background-color:white;" class="navbar navbar-expand-lg navbar-light fixed-top">
+            <div class="container-md">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                <img src=" images/logo.png" width="100" height="30" alt="">
+                </a>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    </ul>
+                    <form class="form-inline d-grid gap-2 d-md-block">
+                        <a href="profile.html">
+                        <button type="button" class="btn btn-outline-primary">Profile</button>
+                        </a>
+                        <a href="login.html">
+                        <button type="button" class="btn btn-outline-danger">Logout</button>
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <div class="alert-container">
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-      </div>
-      <div style="overflow:auto;">
-        <div style="float:right;">
-          <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-          <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+        <div class="container d-flex align-items-center min-vh-600">
+            <form style="height: 40rem;" class="min-vh-600" id="regForm">
+                <!-- One "tab" for each step in the form: -->
+                <div class="tab">
+                    <h4>Step 1: Upload images of your beloved item:</h4>
+                    <br>
+                    <br>
+                    <div class="input-images"></div>
+                    <br>
+                    <br>
+                </div>
+                <div class="tab">
+                    <h4>Step 2: Looking good! Now enter name and description:</h4>
+                    <br />
+                    <br>
+                    <p><input placeholder="Name" oninput="this.className = ''" name="name"></p>
+                    <p><input placeholder="Description" oninput="this.className = ''" name="description"></p>
+                    <label for="list">Category:</label>
+                    <p>
+                        <select name="list" id="cars">
+                            <option value="camera">Camera</option>
+                            <option value="home">Home Appliances</option>
+                            <option value="man">Man's Fashion</option>
+                            <option value="woman">Woman's Fashion</option>
+                            <option value="travel">Travel Essentials</option>
+                            <option value="book">Books</option>
+                        </select>
+                    </p>
+                    <br />
+                </div>
+                <div class="tab">
+                    <h4>Step 3: Nice! Now enter the rental rate:</h4>
+                    <br />
+                    <br />
+                    <div style="width: 30rem;" class="input-group mx-auto">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">per hour</button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#">per day</a></li>
+                            <li><a class="dropdown-item" href="#">per week</a></li>
+                            <li><a class="dropdown-item" href="#">per month</a></li>
+                        </ul>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+                <div style="overflow:auto;">
+                    <div style="float:right;">
+                        <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                        <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                    </div>
+                </div>
+                <!-- Circles which indicates the steps of the form: -->
+                <div style="text-align:center;margin-top:40px;">
+                    <span class="step"></span>
+                    <span class="step"></span>
+                    <span class="step"></span>
+                </div>
+            </form>
         </div>
-      </div>
-      <!-- Circles which indicates the steps of the form: -->
-      <div style="text-align:center;margin-top:40px;">
-        <span class="step"></span>
-        <span class="step"></span>
-        <span class="step"></span>
-      </div>
-    </form>
-  </div>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" src="js/image-uploader.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+        <script>
+            var currentTab = 0; // Current tab is set to be the first tab (0)
+            showTab(currentTab); // Display the current tab
 
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script type="text/javascript" src="js/image-uploader.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+            function showTab(n) {
+              // This function will display the specified tab of the form...
+              var x = document.getElementsByClassName("tab");
+              console.log(x.length);
+              console.log(currentTab);
+              x[n].style.display = "block";
+              //... and fix the Previous/Next buttons:
+              if (n == 0) {
+                document.getElementById("prevBtn").style.display = "none";
+              } else {
+                document.getElementById("prevBtn").style.display = "inline";
+              }
+              if (n == 2) {
+                document.getElementById("nextBtn").innerHTML = "Submit";
+              } else {
+                document.getElementById("nextBtn").innerHTML = "Next";
+              }
+              //... and run a function that will display the correct step indicator:
+              fixStepIndicator(n)
+            }
 
-  <script>
-    var currentTab = 0; // Current tab is set to be the first tab (0)
-    showTab(currentTab); // Display the current tab
+            function nextPrev(n) {
+              // This function will figure out which tab to display
+              var x = document.getElementsByClassName("tab");
+              // Exit the function if any field in the current tab is invalid:
+              if (n == 1 && !validateForm()) return false;
+              // Hide the current tab:
+              x[currentTab].style.display = "none";
+              // Increase or decrease the current tab by 1:
+              currentTab = currentTab + n;
+              // if you have reached the end of the form...
+              if (currentTab == 3) {
+                showTab(2);
+              }
+              if (currentTab == 2) {
+                showTab(2);
+                // ... the form gets submitted:
+                $('#nextBtn').on('click', function(event) {
+                  // disable button
+                  $(this).prop("disabled", true);
 
-    function showTab(n) {
-      // This function will display the specified tab of the form...
-      var x = document.getElementsByClassName("tab");
-      console.log(x.length);
-      console.log(currentTab);
-      x[n].style.display = "block";
-      //... and fix the Previous/Next buttons:
-      if (n == 0) {
-        document.getElementById("prevBtn").style.display = "none";
-      } else {
-        document.getElementById("prevBtn").style.display = "inline";
-      }
-      if (n == 2) {
-        document.getElementById("nextBtn").innerHTML = "Submit";
-      } else {
-        document.getElementById("nextBtn").innerHTML = "Next";
-      }
-      //... and run a function that will display the correct step indicator:
-      fixStepIndicator(n)
-    }
+                  // add spinner to button for some time
+                  $(this).html('<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span> Submitting...');
 
-    function nextPrev(n) {
-      // This function will figure out which tab to display
-      var x = document.getElementsByClassName("tab");
-      // Exit the function if any field in the current tab is invalid:
-      if (n == 1 && !validateForm()) return false;
-      // Hide the current tab:
-      x[currentTab].style.display = "none";
-      // Increase or decrease the current tab by 1:
-      currentTab = currentTab + n;
-      // if you have reached the end of the form...
-      if (currentTab == 3) {
-        showTab(2);
-      }
-      if (currentTab == 2) {
-        showTab(2);
-        // ... the form gets submitted:
-        $('#nextBtn').on('click', function(event) {
-          // disable button
-          $(this).prop("disabled", true);
+                  var _self = $(this);
 
-          // add spinner to button for some time
-          $(this).html('<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span> Submitting...');
+                  setTimeout(function() {
+                    _self.html('Success');
+                  }, 3000);
 
-          var _self = $(this);
+                  setTimeout(function() {
+                    window.location.href = "home.html";
+                  }, 6000);
+                });
+              }
+              // Otherwise, display the correct tab:
+              showTab(currentTab);
+            }
 
-          setTimeout(function() {
-            _self.html('Success');
-          }, 3000);
+            function validateForm() {
+              // This function deals with validation of the form fields
+              var x, y, i, valid = true;
+              x = document.getElementsByClassName("tab");
+              y = x[currentTab].getElementsByTagName("input");
+              // A loop that checks every input field in the current tab:
+              for (i = 0; i < y.length; i++) {
+                // If a field is empty...
+                if (y[i].value == "") {
+                  // add an "invalid" class to the field:
+                  y[i].className += " invalid";
+                  // and set the current valid status to false
+                  valid = false;
+                }
+              }
+              // If the valid status is true, mark the step as finished and valid:
+              if (valid) {
+                document.getElementsByClassName("step")[currentTab].className += " finish";
+              }
+              return valid; // return the valid status
+            }
 
-          setTimeout(function() {
-            window.location.href = "home.html";
-          }, 6000);
-        });
-      }
-      // Otherwise, display the correct tab:
-      showTab(currentTab);
-    }
+            function fixStepIndicator(n) {
+              // This function removes the "active" class of all steps...
+              var i, x = document.getElementsByClassName("step");
+              for (i = 0; i < x.length; i++) {
+                x[i].className = x[i].className.replace(" active", "");
+              }
+              //... and adds the "active" class on the current step:
+              x[n].className += " active";
+            }
+        </script>
+        <script>
+            $(document).ready(function() {
 
-    function validateForm() {
-      // This function deals with validation of the form fields
-      var x, y, i, valid = true;
-      x = document.getElementsByClassName("tab");
-      y = x[currentTab].getElementsByTagName("input");
-      // A loop that checks every input field in the current tab:
-      for (i = 0; i < y.length; i++) {
-        // If a field is empty...
-        if (y[i].value == "") {
-          // add an "invalid" class to the field:
-          y[i].className += " invalid";
-          // and set the current valid status to false
-          valid = false;
-        }
-      }
-      // If the valid status is true, mark the step as finished and valid:
-      if (valid) {
-        document.getElementsByClassName("step")[currentTab].className += " finish";
-      }
-      return valid; // return the valid status
-    }
+              $('.input-images').imageUploader();
 
-    function fixStepIndicator(n) {
-      // This function removes the "active" class of all steps...
-      var i, x = document.getElementsByClassName("step");
-      for (i = 0; i < x.length; i++) {
-        x[i].className = x[i].className.replace(" active", "");
-      }
-      //... and adds the "active" class on the current step:
-      x[n].className += " active";
-    }
-  </script>
-  <script>
-    $(document).ready(function() {
-
-      $('.input-images').imageUploader();
-
-    });
-  </script>
-</body>
-
+            });
+        </script>
+    </body>
 </html>
