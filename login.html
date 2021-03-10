@@ -63,7 +63,7 @@
                 <div class="form-group mb-4">
                   <label for="password" class="sr-only">Password</label>
                   <input type="password" name="password" id="password" class="form-control" placeholder="***********">
-                  <button type="button" id="login-btn" class="btn btn-outline-primary mt-3" onclick="ohyeah()">Login</button>
+                  <button type="button" id="login-btn" class="btn btn-outline-primary mt-3">Login</button>
                 </div>
               </form>
               <a href="#!" class="forgot-password-link">Forgot password?</a>
@@ -84,30 +84,7 @@
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
-
-  <script>
-    $(document).ready(function() {
-
-      $('#login-btn').on('click', function(event) {
-        // disable button
-        $(this).prop("disabled", true);
-
-        // add spinner to button for some time
-        $(this).html('<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span> Logging in...');
-
-        var _self = $(this);
-
-        setTimeout(function() {
-          _self.html('Success');
-        }, 3000);
-
-        setTimeout(function() {
-          window.location.href = "home.html";
-        }, 6000);
-      });
-    });
-  </script>
+  <script type="text/javascript" src="js/login.js"></script>
 </body>
 
 </html>
