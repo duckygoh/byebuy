@@ -56,8 +56,8 @@ body{
     color: orange;
 }
 
-.btn-background-rentNow {
-    width: 130px;
+.btn-background-delete {
+    width: 150px;
     background-color: #f44336;
     border-radius: 4px;
     color: white;
@@ -67,7 +67,7 @@ body{
     cursor: pointer;
 }
 
-.btn-background-rentNow:hover{
+.btn-background-delete:hover{
       background-color: #A9A9A9;
       color: #000; 
 }
@@ -89,7 +89,7 @@ body{
 }
 
 .btn-background-send {
-    width: 166px;
+    width: 150px;
     background-color: #006400;
     border-radius: 4px;
     color: white;

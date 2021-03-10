@@ -77,7 +77,9 @@
           </div>
           <div class="row" id="ads">
             <!-- Category Card -->
-            <div class="col-md-4 filter camera">
+
+            <!-- Deleted product -->
+            <!-- <div class="col-md-4 filter camera">
               <div class="card rounded">
                 <div class="card-image">
                   <span class="card-notify-badge">Highly-Rated</span>
@@ -95,7 +97,7 @@
                   <a class="ad-btn" href="viewRentee.html">View</a>
                 </div>
               </div>
-            </div>
+            </div> -->
             <div class="col-md-4 filter camera">
               <div class="card rounded">
                 <div class="card-image">
@@ -351,11 +353,9 @@
     var reviews = document.getElementById("ReviewInfo");
     var userinfo = document.getElementById("UserInfo");
 
-    listing.style.display = "none";
+    listing.style.display = "block";
     reviews.style.display = "none";
-    userinfo.style.display = "block";
-
-
+    userinfo.style.display = "none";
 
     // Codes below can be optimized
     function viewListings() {
