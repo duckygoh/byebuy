@@ -354,8 +354,8 @@
               <tr>
                 <th scope="row">Rentee</th>
                 <td>XF 10 DIGITAL CAMERA</td>
-                <td>Offer received</td>
-                <td><button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#myModal">View Offer</button></td>
+                <td>Pending Receive</td>
+                <td><button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#myModal">Details</button></td>
               </tr>
               <tr>
                 <th scope="row">Renter</th>
@@ -376,8 +376,8 @@
                 <div class="modal-body">
                   <div class="progress-track">
                     <ul id="progressbar">
-                      <li class="step0 active " id="step1"><span id="three">Offer received</span></li>
-                      <li class="step0 text-center" id="step2">Offer Accepted</li>
+                      <li class="step0 active " id="step1">Offer received</li>
+                      <li class="step0 active text-center" id="step2"><span id="three">Offer Accepted</span></li>
                       <li class="step0 text-center" id="step3">&emsp;&emsp;Rented</li>
                       <li class="step0 text-right" id="step4">Return</li>
                     </ul>
@@ -396,9 +396,8 @@
                       </div>
                     </div>
                     <div class="col-3">
-                      <div class="d-table-row" style="margin-top:30px;"><input onclick="change()" id="accept" type="button" class="btn btn-success" value="Accept Offer">
+                      <div class="d-table-row" style="margin-bottom:40px;"><input onclick="change()" id="accept" type="button" class="btn btn-success" value="Received Item">
                       </div>
-                      <div class="d-table-row" style="margin-bottom:40px;"><button type="button" class="btn btn-danger">&nbsp;Reject Offer</button></div>
                     </div>
                   </div>
                 </div>
@@ -475,7 +474,7 @@
 
         if(click == 2){
           setTimeout(function() {
-            window.location.href = "accepted.html";
+            window.location.href = "home.html";
           }, 2000);
         }
       }
