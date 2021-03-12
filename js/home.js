@@ -1,20 +1,3 @@
-$(document).ready(function() {
-  function myFunction() {
-    var input, filter, cards, cardContainer, h5, title, i;
-    input = document.getElementById("myFilter");
-    filter = input.value.toUpperCase();
-    cardContainer = document.getElementById("ads");
-    cards = cardContainer.getElementsByClassName("card");
-    for (i = 0; i < cards.length; i++) {
-      title = cards[i].querySelector(".card-body .ad-title h5");
-      if (title.innerText.toUpperCase().indexOf(filter) > -1) {
-        cards[i].style.display = "";
-      } else {
-        cards[i].style.display = "none";
-      }
-    }
-  }
-
   $(document).ready(function() {
 
     $(".filter-button").click(function() {
@@ -40,6 +23,5 @@ $(document).ready(function() {
   });
 
   $(document).ready(function() {
-    $('#ads').delay(2000).fadeIn(0);
+  $('#ads').delay(2000).fadeIn(0);
   });
-});
