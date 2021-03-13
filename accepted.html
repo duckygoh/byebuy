@@ -410,94 +410,94 @@
         </div>
       </div>
     </div>
+  </div>
+  <div style="margin-top:200px">  
+  </div>
+  <footer style="position: fixed;bottom: 0;width: 100%;" class="footer mt-auto py-3 bg-light">
+    <div style="text-align:center" class="container">
+      <a href="#" class="fa fa-facebook fa-2x"></a>
+      <a href="#" class="fa fa-twitter fa-2x"></a>
+      <a href="#" class="fa fa-instagram fa-2x"></a>
 
-    <footer style="bottom: 0;width: 100%;" class="footer mt-auto py-3 bg-light">
-      <div style="text-align:center" class="container">
-        <a href="#" class="fa fa-facebook fa-2x"></a>
-        <a href="#" class="fa fa-twitter fa-2x"></a>
-        <a href="#" class="fa fa-instagram fa-2x"></a>
-  
-        <ul class="list-inline">
-          <li class="list-inline-item"><a href="#">Home</a></li>
-          <li class="list-inline-item"><a href="#">Services</a></li>
-          <li class="list-inline-item"><a href="#">About</a></li>
-          <li class="list-inline-item"><a href="#">Terms</a></li>
-          <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
-        </ul>
-        <span class="text-muted">ByeBye © 2021 Copyright.</span>
-      </div>
-    </footer>
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="#">Home</a></li>
+        <li class="list-inline-item"><a href="#">Services</a></li>
+        <li class="list-inline-item"><a href="#">About</a></li>
+        <li class="list-inline-item"><a href="#">Terms</a></li>
+        <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+      </ul>
+      <span class="text-muted">ByeBye © 2021 Copyright.</span>
+    </div>
+  </footer>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
 
-    </main>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
+  <script>
+    var listing = document.getElementById("ListingInfo");
+    var reviews = document.getElementById("ReviewInfo");
+    var userinfo = document.getElementById("UserInfo");
+    var transaction = document.getElementById("Transactions");
 
-    <script>
-      var listing = document.getElementById("ListingInfo");
-      var reviews = document.getElementById("ReviewInfo");
-      var userinfo = document.getElementById("UserInfo");
-      var transaction = document.getElementById("Transactions");
+    listing.style.display = "none";
+    reviews.style.display = "none";
+    userinfo.style.display = "none";
+    transaction.style.display = "block";
 
+    // Codes below can be optimized
+    function viewListings() {
+      listing.style.display = "block";
+      userinfo.style.display = "none";
+      reviews.style.display = "none";
+      transaction.style.display = "none";
+    }
+
+    function viewReviews() {
+      reviews.style.display = "block";
+      userinfo.style.display = "none";
+      listing.style.display = "none";
+      transaction.style.display = "none";
+    }
+
+    function viewUserInfo() {
+      userinfo.style.display = "block";
       listing.style.display = "none";
       reviews.style.display = "none";
+      transaction.style.display = "none";
+    }
+
+    function viewTransactions() {
       userinfo.style.display = "none";
+      listing.style.display = "none";
+      reviews.style.display = "none";
       transaction.style.display = "block";
+    }
 
-      // Codes below can be optimized
-      function viewListings() {
-        listing.style.display = "block";
-        userinfo.style.display = "none";
-        reviews.style.display = "none";
-        transaction.style.display = "none";
+    var click = 0;
+
+    function change() {
+      click += 1;
+      document.getElementById("accept").value = "Confirm?";
+
+      if (click == 2) {
+        setTimeout(function() {
+          window.location.href = "home.html";
+        }, 2000);
       }
+    }
+  </script>
 
-      function viewReviews() {
-        reviews.style.display = "block";
-        userinfo.style.display = "none";
-        listing.style.display = "none";
-        transaction.style.display = "none";
-      }
-
-      function viewUserInfo() {
-        userinfo.style.display = "block";
-        listing.style.display = "none";
-        reviews.style.display = "none";
-        transaction.style.display = "none";
-      }
-
-      function viewTransactions() {
-        userinfo.style.display = "none";
-        listing.style.display = "none";
-        reviews.style.display = "none";
-        transaction.style.display = "block";
-      }
-
-      var click = 0;
-
-      function change() {
-        click += 1;
-        document.getElementById("accept").value = "Confirm?";
-
-        if(click == 2){
-          setTimeout(function() {
-            window.location.href = "home.html";
-          }, 2000);
-        }
-      }
-    </script>
-
-    <script>
-      $(document).ready(function() {
-        $("#myInput").on("keyup", function() {
-          var value = $(this).val().toLowerCase();
-          $("#myList tr").filter(function() {
-            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-          });
+  <script>
+    $(document).ready(function() {
+      $("#myInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#myList tr").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
         });
       });
-    </script>
+    });
+  </script>
 
 </body>
 
