@@ -21,7 +21,3 @@
     $(this).addClass("active");
 
   });
-
-  $(document).ready(function() {
-  $('#ads').delay(2000).fadeIn(0);
-  });
