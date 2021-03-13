@@ -1,0 +1,13 @@
+a{
+  text-decoration: none;
+}
+
+a:hover {
+    color:white;
+    text-decoration:none!important;
+    cursor:pointer;
+}
+
+a:hover, a:focus, a:active, a:visited, a:link{
+    text-decoration: none!important;
+}
