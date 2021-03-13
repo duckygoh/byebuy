@@ -86,13 +86,13 @@
           <h3 class="mb-3">Listings</h3>
           <!-- Search Bar -->
           <div class="d-flex justify-content-center px-5">
-            <div class="search"> <input type="text" id="myFilter" onkeyup="myFunction()" class="search-input"
+            <div class="search"> <input type="text" id="search" class="search-input"
                 placeholder="Search..." name=""> <a href="#" class="search-icon"> <i class="bi bi-search"></i> </a>
             </div>
           </div>
           <div class="row" id="ads">
             <!-- Category Card -->
-            <div class="col-md-4 filter camera">
+            <div class="col-md-4 filter camera" data-role="searchproduct">
               <div class="card rounded">
                 <div class="card-image">
                   <span class="card-notify-badge">Highly-Rated</span>
@@ -111,7 +111,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4 filter camera">
+            <div class="col-md-4 filter camera" data-role="searchproduct">
               <div class="card rounded">
                 <div class="card-image">
                   <span class="card-notify-badge">Like-New</span>
@@ -130,7 +130,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4 filter camera">
+            <div class="col-md-4 filter camera" data-role="searchproduct">
               <div class="card rounded">
                 <div class="card-image">
                   <span class="card-notify-badge">Price Reduced</span>
@@ -149,7 +149,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4 filter home">
+            <div class="col-md-4 filter home" data-role="searchproduct">
               <div class="card rounded">
                 <div class="card-image">
                   <span class="card-notify-badge">Price Reduced</span>
@@ -581,6 +581,15 @@
         var value = $(this).val().toLowerCase();
         $("#myList tr").filter(function () {
           $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+
+    $(document).ready(function () {
+      $("#search").on("keyup", function () {
+        var value = $(this).val().toLowerCase();
+        $('div[data-role="searchproduct"]').filter(function () {
+          $(this).toggle($(this).find('h5').text().toLowerCase().indexOf(value) > -1)
         });
       });
     });
