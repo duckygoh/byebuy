@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="css/transact.css">
   <link rel="stylesheet" href="css/anchor.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -404,26 +406,33 @@
                 </div>
               </div>
             </div>
-
-          </div>
-
-          <div style="margin-top:100px;">
-            <nav class="login-card-footer-nav">
-              <a href="#!">Terms of use.</a>
-              <a href="#!">Privacy policy</a>
-            </nav>
           </div>
         </div>
       </div>
     </div>
 
+    <footer style="bottom: 0;width: 100%;" class="footer mt-auto py-3 bg-light">
+      <div style="text-align:center" class="container">
+        <a href="#" class="fa fa-facebook fa-2x"></a>
+        <a href="#" class="fa fa-twitter fa-2x"></a>
+        <a href="#" class="fa fa-instagram fa-2x"></a>
+  
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#">Home</a></li>
+          <li class="list-inline-item"><a href="#">Services</a></li>
+          <li class="list-inline-item"><a href="#">About</a></li>
+          <li class="list-inline-item"><a href="#">Terms</a></li>
+          <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+        </ul>
+        <span class="text-muted">ByeBye © 2021 Copyright.</span>
+      </div>
+    </footer>
 
     </main>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
-
 
     <script>
       var listing = document.getElementById("ListingInfo");
@@ -435,8 +444,6 @@
       reviews.style.display = "none";
       userinfo.style.display = "none";
       transaction.style.display = "block";
-
-
 
       // Codes below can be optimized
       function viewListings() {
