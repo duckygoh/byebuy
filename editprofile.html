@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/search-bar.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/transact.css">
+    <link rel="stylesheet" href="css/feedback.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+    <link href='https://use.fontawesome.com/releases/v5.7.2/css/all.css'>
+
+
+    <!-- title and favicon -->
+    <title>Start Renting!</title>
+    <link rel="shortcut icon" type="image/jpg" href="images/favicon.ico" />
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav style="background-color:white;" class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container-md">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="home.html">
+                <img src=" images/logo.png" width="100" height="30" alt="">
+            </a>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                </ul>
+                <form class="form-inline d-grid gap-2 d-md-block">
+                    <a href="profile.html">
+                        <button type="button" class="btn btn-outline-primary">Profile</button>
+                    </a>
+                    <a href="chat.html">
+                        <button type="button" class="btn btn-outline-success"><i class="bi bi-chat"></i> Chat</button>
+                    </a>
+                    <a href="login.html">
+                        <button type="button" class="btn btn-outline-danger">Logout</button>
+                    </a>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row d-flex justify-content-center" style="background:white;">
+            <div style="margin-top:100px;">
+                <div class="row">
+                    <div class="col-2">
+                        <div class="btn-group-vertical">
+                            <div class="card-inner p-1 d-flex flex-column align-items-center">
+                                <button class="btn filter-button" onclick="editProfile()">Edit Profile</button>
+                            </div>
+                            <div class="card-inner p-1 d-flex flex-column align-items-center">
+                                <button class="btn filter-button" onclick="changePassword()">Change Password</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-8">
+                        <div class="card">
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+
+                                    <!-- Edit Profile -->
+                                    <div id=editProfile>
+                                        <div style="margin-top:50px;"></div>
+                                        <h2>Edit Profile</h2>
+                                        <br>
+                                        <br>
+                                        <h4>Profile Picture</h4>
+                                        <img id="image1" src="images\icons\cat-64.png" alt="profilepicture"
+                                            class="rounded-circle" width="100">
+                                        <input type='file' id="imgInput" />
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <div class="form-group">
+                                            <h4>Name</h4>
+                                            <input type="text" name="name" class="form-control" size="73"
+                                                value="Tester Name">
+                                            <br>
+                                            <h4>Email</h4>
+                                            <input type="email" name="email" class="form-control" size="73"
+                                                value="testinguser123@gmail.com">
+                                            <br>
+                                            <h4>Mobile</h4>
+                                            <input type="mobile" name="mobile" class="form-control" size="73"
+                                                value="+65 91234567">
+                                            <br>
+                                            <h4>Country</h4>
+                                            <input type="text" disabled name="name" class="form-control" size="73"
+                                                value="Singapore">
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <a href="profile.html">
+                                            <button type="button" class="btn-background-send">Save Changes</button>
+                                        </a>
+                                        <div style="margin-bottom:100px;"></div>
+                                    </div>
+
+                                    <!-- change password -->
+                                    <div id=changePassword>
+                                        <div style="margin-top:50px;"></div>
+                                        <h2>Change password</h2>
+                                        <br>
+                                        <br>
+                                        <div class="form-group">
+                                            <h4>Current Password</h4>
+                                            <input type="password" name="currpw" class="form-control" size="73">
+                                            <br>
+                                            <h4>New Password</h4>
+                                            <input type="password" name="newpw" class="form-control" size="73">
+                                            <br>
+                                            <h4>Confirm Password</h4>
+                                            <input type="password" name="confirmpw" class="form-control" size="73">
+                                            <br>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <a href="profile.html">
+                                            <button type="button" class="btn-background-send">Save Changes</button>
+                                        </a>
+                                        <div style="margin-bottom:100px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div style="margin-top:100px;">
+        <nav class="login-card-footer-nav">
+            <a href="#!">Terms of use.</a>
+            <a href="#!">Privacy policy</a>
+        </nav>
+    </div>
+    </div>
+
+    </main>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
+
+
+    <script>
+        var editprofile = document.getElementById("editProfile");
+        var changepw = document.getElementById("changePassword");
+
+        editprofile.style.display = "block";
+        changepw.style.display = "none";
+
+        function editProfile() {
+            editprofile.style.display = "block";
+            changepw.style.display = "none";
+        }
+
+        function changePassword() {
+            editprofile.style.display = "none";
+            changepw.style.display = "block";
+        }
+    </script>
+
+    <script>
+        function readImageFile(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#image1').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+        $("#imgInput").change(function () {
+            readImageFile(this);
+        });
+
+
+    </script>
+
+</body>
+
+</html>

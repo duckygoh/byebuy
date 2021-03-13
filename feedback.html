@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/search-bar.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/transact.css">
+    <link rel="stylesheet" href="css/feedback.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+    <link href='https://use.fontawesome.com/releases/v5.7.2/css/all.css'>
+
+
+    <!-- title and favicon -->
+    <title>Start Renting!</title>
+    <link rel="shortcut icon" type="image/jpg" href="images/favicon.ico" />
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav style="background-color:white;" class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container-md">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="home.html">
+                <img src=" images/logo.png" width="100" height="30" alt="">
+            </a>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                </ul>
+                <form class="form-inline d-grid gap-2 d-md-block">
+                    <a href="profile.html">
+                        <button type="button" class="btn btn-outline-primary">Profile</button>
+                    </a>
+                    <a href="chat.html">
+                        <button type="button" class="btn btn-outline-success"><i class="bi bi-chat"></i> Chat</button>
+                    </a>
+                    <a href="login.html">
+                        <button type="button" class="btn btn-outline-danger">Logout</button>
+                    </a>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row d-flex justify-content-center" style="background:white;">
+            <div style="margin-top:100px;">
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <div class="card">
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                    <div style="margin-top:50px;"></div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                        <h2>Give Feedback to</h2>
+                                        </div>
+                                        <div class="col-md-3">
+                                        <img src="images\icons\cat-64.png" alt="profilepicture" class="rounded-circle" width="50">
+                                        <h5>Jane</h5>
+                                    </div>
+                                    </div>
+                                    <br>
+                                    <h4>Rating</h4>
+                                    <div class="rate">
+                                        <input type="radio" id="star5" name="rate" value="5" />
+                                        <label for="star5" title="text">5 stars</label>
+                                        <input type="radio" id="star4" name="rate" value="4" />
+                                        <label for="star4" title="text">4 stars</label>
+                                        <input type="radio" id="star3" name="rate" value="3" />
+                                        <label for="star3" title="text">3 stars</label>
+                                        <input type="radio" id="star2" name="rate" value="2" />
+                                        <label for="star2" title="text">2 stars</label>
+                                        <input type="radio" id="star1" name="rate" value="1" />
+                                        <label for="star1" title="text">1 star</label>
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <div style="margin-top:30px;"></div>
+                                    <div class="form-group">
+                                        <h4>Describe your experience</h4>
+                                        <textarea id="description" name="description" class="form-control" rows="5"
+                                            cols="5">
+                                        </textarea>
+                                    </div>
+                                    <br>
+                                    <a href="profile.html">
+                                        <button type="button" class="btn-background-send">Submit</button>
+                                    </a>
+                                    <div style="margin-bottom:100px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div style="margin-top:100px;">
+            <nav class="login-card-footer-nav">
+                <a href="#!">Terms of use.</a>
+                <a href="#!">Privacy policy</a>
+            </nav>
+        </div>
+    </div>
+
+    </main>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
+
+
+    <script>
+    </script>
+
+</body>
+
+</html>
