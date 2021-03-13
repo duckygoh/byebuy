@@ -71,7 +71,6 @@
                     <div class="row mt-4 g-1 px-1 mb-1">
                         <div class="col-md-1">
                         </div>
-
                         <div class="col-md-4">
                             <div class="input-images"></div>
                             <div class="imgContainer">
@@ -93,88 +92,92 @@
                         </div>
                         <div class="col-md-1">
                         </div>
+
                         <!-- Content on the right -->
                         <div class="col-md-6">
-                            <div class="row">
-                                <div class="col-md-1">
-                                </div>
-                                <div class="col-md-10">
-                                    <div class="form-group">
-                                        <label for="name">Name</label>
-                                        <input type="name" id="name" class="form-control" value="XF 10 DIGITAL CAMERA">
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="margin-top:10px;"></div>
-                            <div class="row">
-                                <div class="col-md-1">
-                                </div>
-                                <div class="col-md-10">
-                                    <div class="form-group">
-                                        <label for="description">Description</label>
-                                        <textarea id="description" name="description" class="form-control" rows="5"
-                                            cols="5">NIL
-                                        </textarea>
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="margin-top:10px;"></div>
-                            <div class="row">
-                                <div class="col-md-1">
-                                </div>
-                                <div class="col-md-10">
-                                    <label for="list">Category</label>
-                                    <p><select name="list" id="category">
-                                            <option value="camera">Camera</option>
-                                            <option value="home">Home Appliances</option>
-                                            <option value="man">Man's Fashion</option>
-                                            <option value="woman">Woman's Fashion</option>
-                                            <option value="travel">Travel Essentials</option>
-                                            <option value="book">Books</option>
-                                        </select>
-                                    </p>
-                                </div>
-                            </div>
-                            <div style="margin-top:10px;"></div>
-                            <div class="row">
-                                <div class="col-md-1">
-                                </div>
-                                <div class="col-md-10">
-                                    <label for="price">Price</label>
-                                    <div class="input-group mx-auto">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text">$</span>
+                            <form action="edited.html">
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-md-1">
                                         </div>
-                                        <input type="text" class="form-control"
-                                            aria-label="Text input with dropdown button" value = "20.00">
-                                        <div>
-                                            <button class="btn btn-outline-secondary dropdown-toggle" type="button"
-                                                id="dropdownMenu" data-bs-toggle="dropdown" aria-expanded="false">
-                                                per hour</button>
-                                            <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" data-value="per day" href="#">per day</a>
-                                                </li>
-                                                <li><a class="dropdown-item" data-value="per week" href="#">per week</a>
-                                                </li>
-                                                <li><a class="dropdown-item" data-value="per month" href="#">per
-                                                        month</a></li>
-                                            </ul>
+                                        <div class="col-md-10">
+                                            <div class="form-group">
+                                                <label for="name">Name</label>
+                                                <input type="name" id="name" class="form-control"
+                                                    value="XF 10 DIGITAL CAMERA" required>
+                                            </div>
                                         </div>
                                     </div>
+                                    <div style="margin-top:10px;"></div>
+                                    <div class="row">
+                                        <div class="col-md-1">
+                                        </div>
+                                        <div class="col-md-10">
+                                            <div class="form-group">
+                                                <label for="description">Description</label>
+                                                <textarea class="form-control"rows="5" cols="5" required>NIL</textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="margin-top:10px;"></div>
+                                    <div class="row">
+                                        <div class="col-md-1">
+                                        </div>
+                                        <div class="col-md-10">
+                                            <label for="list">Category</label>
+                                            <p><select name="list" id="category">
+                                                    <option value="camera">Camera</option>
+                                                    <option value="home">Home Appliances</option>
+                                                    <option value="man">Man's Fashion</option>
+                                                    <option value="woman">Woman's Fashion</option>
+                                                    <option value="travel">Travel Essentials</option>
+                                                    <option value="book">Books</option>
+                                                </select>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div style="margin-top:10px;"></div>
+                                    <div class="row">
+                                        <div class="col-md-1">
+                                        </div>
+                                        <div class="col-md-10">
+                                            <label for="price">Price</label>
+                                            <div class="input-group mx-auto">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">$</span>
+                                                </div>
+                                                <input type="text" class="form-control"
+                                                    aria-label="Text input with dropdown button" value="20.00" required>
+                                                <div>
+                                                    <button class="btn btn-outline-secondary dropdown-toggle"
+                                                        type="button" id="dropdownMenu" data-bs-toggle="dropdown"
+                                                        aria-expanded="false">
+                                                        per hour</button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" data-value="per day" href="#">per
+                                                                day</a>
+                                                        </li>
+                                                        <li><a class="dropdown-item" data-value="per week" href="#">per
+                                                                week</a>
+                                                        </li>
+                                                        <li><a class="dropdown-item" data-value="per month" href="#">per
+                                                                month</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="margin-top:50px;"></div>
+                                    <div class="row">
+                                        <div class="col-md-7">
+                                        </div>
+                                        <div class="col-md-2">
+                                            <input type="submit" class="btn-background-send" values="Save Changes">
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                             <div style="margin-top:50px;"></div>
-                            <div class="row">
-                                <div class="col-md-7">
-                                </div>
-                                <div class="col-md-2">
-                                    <a href="edited.html">
-                                        <button type="button" class="btn-background-send">Submit</button>
-                                    </a>
-                                </div>
-                            </div>
+                            </form>
                         </div>
-                        <div style="margin-top:50px;"></div>
                     </div>
                 </div>
             </div>

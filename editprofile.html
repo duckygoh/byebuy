@@ -69,12 +69,11 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="col-8">
                         <div class="card">
                             <div class="row">
                                 <div class="col-md-2"></div>
-                                <div class="col-md-8">
+                                <div class="col-md-7">
 
                                     <!-- Edit Profile -->
                                     <div id=editProfile>
@@ -82,60 +81,63 @@
                                         <h2>Edit Profile</h2>
                                         <br>
                                         <br>
-                                        <h4>Profile Picture</h4>
+                                        <h6>Profile Picture</h6>
                                         <img id="image1" src="images\icons\cat-64.png" alt="profilepicture"
                                             class="rounded-circle" width="100">
-                                        <input type='file' id="imgInput" />
+                                        <input type='file' id="imgInput">
                                         <br>
                                         <br>
                                         <br>
-                                        <div class="form-group">
-                                            <h4>Name</h4>
-                                            <input type="text" name="name" class="form-control" size="73"
-                                                value="Tester Name">
-                                            <br>
-                                            <h4>Email</h4>
-                                            <input type="email" name="email" class="form-control" size="73"
-                                                value="testinguser123@gmail.com">
-                                            <br>
-                                            <h4>Mobile</h4>
-                                            <input type="mobile" name="mobile" class="form-control" size="73"
-                                                value="+65 91234567">
-                                            <br>
-                                            <h4>Country</h4>
-                                            <input type="text" disabled name="name" class="form-control" size="73"
-                                                value="Singapore">
-                                        </div>
-                                        <br>
-                                        <br>
-                                        <a href="profile.html">
-                                            <button type="button" class="btn-background-send">Save Changes</button>
-                                        </a>
+                                        <form action="profile.html">
+                                            <div class="form-group">
+                                                <h6>Name</h6>
+                                                <input type="text" name="name" class="form-control" size="73"
+                                                    value="Tester Name" required>
+                                                <br>
+                                                <h6>Email</h6>
+                                                <input type="email" name="email" class="form-control" size="73"
+                                                    value="testinguser123@gmail.com" required>
+                                                <br>
+                                                <h6>Mobile</h6>
+                                                <input type="number" name="mobile" class="form-control" size="73"
+                                                    value="91234567" required>
+                                                <br>
+                                                <h6>Country</h6>
+                                                <input type="text" disabled name="name" class="form-control" size="73"
+                                                    value="Singapore">
+                                                <br>
+                                                <br>
+                                                <input type="submit" class="btn-background-send" value="Save Changes">
+                                            </div>
+                                        </form>
                                         <div style="margin-bottom:100px;"></div>
                                     </div>
 
                                     <!-- change password -->
                                     <div id=changePassword>
                                         <div style="margin-top:50px;"></div>
-                                        <h2>Change password</h2>
+                                        <h2>Change Password</h2>
                                         <br>
                                         <br>
-                                        <div class="form-group">
-                                            <h4>Current Password</h4>
-                                            <input type="password" name="currpw" class="form-control" size="73">
-                                            <br>
-                                            <h4>New Password</h4>
-                                            <input type="password" name="newpw" class="form-control" size="73">
-                                            <br>
-                                            <h4>Confirm Password</h4>
-                                            <input type="password" name="confirmpw" class="form-control" size="73">
-                                            <br>
-                                        </div>
-                                        <br>
-                                        <br>
-                                        <a href="profile.html">
-                                            <button type="button" class="btn-background-send">Save Changes</button>
-                                        </a>
+                                        <form action="profile.html">
+                                            <div class="form-group">
+                                                <h6>Current Password</h6>
+                                                <input type="password" name="currpw" class="form-control" size="73"
+                                                    required>
+                                                <br>
+                                                <h6>New Password</h6>
+                                                <input type="password" name="newpw" class="form-control" size="73"
+                                                    required>
+                                                <br>
+                                                <h6>Confirm Password</h6>
+                                                <input type="password" name="confirmpw" class="form-control" size="73"
+                                                    required>
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <input type="submit" class="btn-background-send" value="Save Changes">
+                                            </div>
+                                        </form>
                                         <div style="margin-bottom:100px;"></div>
                                     </div>
                                 </div>
@@ -194,8 +196,6 @@
         $("#imgInput").change(function () {
             readImageFile(this);
         });
-
-
     </script>
 
 </body>
