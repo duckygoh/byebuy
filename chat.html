@@ -126,17 +126,18 @@
                 <span class="message-data-name">Raymond</span> <i class="fa fa-circle me"></i>
               </div>
               <div class="message other-message float-right">
-                Avail?
+                <strong>Raymond is asking for XF 10 DIGITAL CAMERA</strong>
               </div>
             </li>
-            <li>
-              <div class="message-data">
-                <span class="message-data-name"><i class="fa fa-circle online"></i> Jane</span>
-                <span class="message-data-time">09:20 AM, Today</span>
+            <li class="clearfix">
+              <div class="message-data align-right">
+                <span class="message-data-time">09:14 AM, Today</span> &nbsp; &nbsp;
+                <span class="message-data-name">Raymond</span> <i class="fa fa-circle me"></i>
               </div>
-              <div class="message my-message">
-                Hello.
+              <div class="message other-message float-right">
+                hi
               </div>
+            </li>
             </li>
             <li>
               <div class="message-data">
@@ -144,7 +145,7 @@
                 <span class="message-data-time">09:21 AM, Today</span>
               </div>
               <div class="message my-message">
-                Yes.
+                hihi
               </div>
             </li>
           </ul>
@@ -208,17 +209,15 @@
   <script>
     (function () {
       var count = 0;
-      var user_count = 0;
 
       var chat = {
         messageToSend: '',
         messageResponses: [
           'Hello',
-          'hihi',
           'Yes, Item is available.',
           '20 per day, isit okay?',
           'My number is 91234567',
-          ':)'
+          'Offer Sent'
         ],
         init: function () {
           this.cacheDOM();
@@ -249,18 +248,12 @@
             this.$textarea.val('');
 
             // responses
-            if (user_count >= 2) {
               var templateResponse = Handlebars.compile($("#message-response-template").html());
               var contextResponse = {
                 response: (this.messageResponses[count]),
                 time: this.getCurrentTime()
               };
-            }
 
-            if (user_count == 1) {
-              document.getElementById("other-message").style.fontWeight = "bold";
-              user_count++;
-            }
 
             setTimeout(function () {
               this.$chatHistoryList.append(templateResponse(contextResponse));
@@ -270,23 +263,15 @@
         },
 
         addMessage: function () {
-          var someText = "Raymond is asking for XF 10 DIGITAL CAMERA";
-          if (user_count == 1) {
-            this.messageToSend = someText;
-            this.render();
-            this.messageToSend = 'hi'
-            this.render();
-          } else {
+
             this.messageToSend = this.$textarea.val()
             this.render();
-          }
+
         },
         addMessageEnter: function (event) {
           // enter was pressed
           if (event.keyCode === 13) {
             count++;
-            user_count++;
-            console.log(count);
             this.addMessage();
           }
         },
