@@ -52,10 +52,6 @@ body{
     box-shadow: none!important;
 }
 
-.checked {
-    color: orange;
-}
-
 .btn-background-delete {
     width: 150px;
     background-color: #f44336;

@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/search-bar.css">
     <link rel="stylesheet" href="css/cards.css">
     <link rel="stylesheet" href="css/profile.css">
-    <link rel="stylesheet" href="css/chat.css">
     <link rel="stylesheet" href="css/upload.css">
     <link rel="stylesheet" href="css/image-uploader.css">
     <link rel="stylesheet" href="css/anchor.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -31,6 +31,35 @@
         .imgContainer {
             float: left;
         }
+
+        .img-wrap {
+            position: relative;
+            display: inline-block;
+            font-size: 0;
+        }
+
+        .close {
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            z-index: 100;
+            background-color: #FFF;
+            padding: 5px 2px 2px;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+            opacity: .2;
+            text-align: center;
+            font-size: 22px;
+            line-height: 10px;
+            border-radius: 50%;
+            display: none;
+        }
+
+        .img-wrap:hover .close {
+            opacity: 1;
+            display: block;
+        }
     </style>
 
 </head>
@@ -44,7 +73,7 @@
                 aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="home.html">
+            <a class="navbar-brand" href="home_upload.html">
                 <img src=" images/logo.png" width="100" height="30" alt="">
             </a>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
@@ -70,25 +99,36 @@
             <div style="margin-top:100px;">
                 <div class="card">
                     <div class="row mt-4 g-1 px-1 mb-1">
-                        <div class="col-md-1">
-                        </div>
+                        <div class="col-md-1"></div>
                         <div class="col-md-4">
                             <div class="input-images"></div>
-                            <div class="imgContainer">
-                                <img src="https://media.karousell.com/media/photos/products/2021/2/19/xf_10_digital_camera_black__go_1613714845_92fa320a_progressive"
-                                    width="140" alt="Alternate">
+                            <div class="img-wrap">
+                                <div class="imgContainer">
+                                    <i class="bi bi-trash close"></i>
+                                    <img src="https://media.karousell.com/media/photos/products/2021/2/19/xf_10_digital_camera_black__go_1613714845_92fa320a_progressive"
+                                        width="130" alt="Alternate" id="image1">
+                                </div>
                             </div>
-                            <div class="imgContainer">
-                                <img src="https://media.karousell.com/media/photos/products/2021/2/19/xf_10_digital_camera_black__go_1613714845_92fa320a_progressive"
-                                    width="140" alt="Alternate">
+                            <div class="img-wrap">
+                                <div class="imgContainer">
+                                    <i class="bi bi-trash close"></i>
+                                    <img src="https://media.karousell.com/media/photos/products/2021/2/19/xf_10_digital_camera_black__go_1613714845_13a88292_progressive"
+                                        width="130" alt="Alternate" id="image2">
+                                </div>
                             </div>
-                            <div class="imgContainer">
-                                <img src="https://media.karousell.com/media/photos/products/2021/2/19/xf_10_digital_camera_black__go_1613714845_92fa320a_progressive"
-                                    width="140" alt="Alternate">
+                            <div class="img-wrap">
+                                <div class="imgContainer">
+                                    <i class="bi bi-trash close"></i>
+                                    <img src="https://media.karousell.com/media/photos/products/2021/2/19/xf_10_digital_camera_black__go_1613714845_0aab34c8_progressive"
+                                        width="130" alt="Alternate" id="image3">
+                                </div>
                             </div>
-                            <div class="imgContainer">
-                                <img src="https://media.karousell.com/media/photos/products/2021/2/19/xf_10_digital_camera_black__go_1613714845_92fa320a_progressive"
-                                    width="140" alt="Alternate">
+                            <div class="img-wrap">
+                                <div class="imgContainer">
+                                    <i class="bi bi-trash close"></i>
+                                    <img src="https://media.karousell.com/media/photos/products/2021/2/19/xf_10_digital_camera_black__go_1613714845_9697eb60_progressive"
+                                        width="130" alt="Alternate" id="image4">
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-1">
@@ -116,7 +156,8 @@
                                         <div class="col-md-10">
                                             <div class="form-group">
                                                 <label for="description">Description</label>
-                                                <textarea class="form-control"rows="5" cols="5" required>NIL</textarea>
+                                                <textarea class="form-control" rows="5" cols="5"
+                                                    required>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -153,8 +194,11 @@
                                                     <button class="btn btn-outline-secondary dropdown-toggle"
                                                         type="button" id="dropdownMenu" data-bs-toggle="dropdown"
                                                         aria-expanded="false">
-                                                        per hour</button>
+                                                        per day</button>
                                                     <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" data-value="per day" href="#">per
+                                                            hour</a>
+                                                        </li>
                                                         <li><a class="dropdown-item" data-value="per day" href="#">per
                                                                 day</a>
                                                         </li>
@@ -185,6 +229,21 @@
         </div>
     </div>
 
+    <footer style="bottom: 0;width: 100%;" class="footer mt-auto py-3 bg-light">
+        <div style="text-align:center" class="container">
+            <a href="#" class="fa fa-facebook fa-lg"></a>
+            <a href="#" class="fa fa-twitter fa-lg"></a>
+            <a href="#" class="fa fa-instagram fa-lg"></a>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Home</a></li>
+                <li class="list-inline-item"><a href="#">About</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+            </ul>
+            <span class="text-muted">ByeBye © 2021 Copyright.</span>
+        </div>
+    </footer>
+
     <a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i
             class="bi bi-arrow-bar-up"></i></a>
 
@@ -205,6 +264,14 @@
             $(this).parent().parent().siblings(".btn:first-child").html($(this).text() + ' <span class="caret"></span>');
             $(this).parent().parent().siblings(".btn:first-child").val($(this).text());
         });
+
+        var removeImg = document.querySelectorAll('.img-wrap .close')
+        for (var i = 0, l = removeImg.length; i < l; i++) {
+            removeImg[i].addEventListener('click', function() {
+                var imgWrap = this.parentElement;
+                imgWrap.parentElement.removeChild(imgWrap);
+            });
+        }
     </script>
 </body>
 
