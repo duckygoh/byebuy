@@ -10,15 +10,16 @@
     <link rel="stylesheet" href="css/search-bar.css">
     <link rel="stylesheet" href="css/cards.css">
     <link rel="stylesheet" href="css/profile.css">
-    <link rel="stylesheet" href="css/chat.css">
     <link rel="stylesheet" href="css/anchor.css">
+    <link rel="stylesheet" href="css/transact.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- title and favicon -->
     <title>Start Renting!</title>
@@ -66,8 +67,8 @@
                 aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="home.html">
-                <img src="images/logo.png" width="100" height="30" alt="">
+            <a class="navbar-brand" href="home_upload.html">
+                <img src=" images/logo.png" width="100" height="30" alt="">
             </a>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -75,6 +76,9 @@
                 <form class="form-inline d-grid gap-2 d-md-block">
                     <a href="profile.html">
                         <button type="button" class="btn btn-outline-primary">Profile</button>
+                    </a>
+                    <a href="chat.html">
+                        <button type="button" class="btn btn-outline-success"><i class="bi bi-chat"></i> Chat</button>
                     </a>
                     <a href="login.html">
                         <button type="button" class="btn btn-outline-danger">Logout</button>
@@ -93,7 +97,11 @@
                         <div class="col-md-1">
                             <img src="https://media.karousell.com/media/photos/products/2021/2/19/xf_10_digital_camera_black__go_1613714845_92fa320a_progressive"
                                 class="card-img" alt="Alternate" width="100" onclick="changeImage(src)" display: block>
-                            <img src="https://media.karousell.com/media/photos/products/2021/2/27/sony_rx_100_m3_1614399109_2e7ce6c9_progressive.jpg"
+                            <img src="https://media.karousell.com/media/photos/products/2021/2/19/xf_10_digital_camera_black__go_1613714845_13a88292_progressive"
+                                class="card-img" alt="Alternate" width="100" onclick="changeImage(src)" display: block>
+                            <img src="https://media.karousell.com/media/photos/products/2021/2/19/xf_10_digital_camera_black__go_1613714845_9697eb60_progressive"
+                                class="card-img" alt="Alternate" width="100" onclick="changeImage(src)" display: block>
+                            <img src="https://media.karousell.com/media/photos/products/2021/2/19/xf_10_digital_camera_black__go_1613714846_d2e2860d_progressive"
                                 class="card-img" alt="Alternate" width="100" onclick="changeImage(src)" display: block>
                         </div>
 
@@ -112,61 +120,63 @@
                                     <h3>XF 10 Digital Camera</h3>
                                 </div>
                                 <div class="col-md-5">
-                                    <h3>$40.00 / day</h3>
-                                </div>
-                            </div>
-
-                            <div style="margin-top:50px;">
-                                <div class="row">
-                                    <div class="col-md-1">
-                                    </div>
-                                    <div class="col-md-5">
-                                        <a href="profile.html">
-                                            <img src="images\icons\cat-64.png" alt="profilepicture"
-                                                class="rounded-circle" width="50">
-                                        </a>
-                                        <span class="heading">5.0</span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="text">(5)</span>
-                                        <h5>Jane</h5>
-                                    </div>
+                                    <h3>$20.00 / day</h3>
                                 </div>
                             </div>
 
                             <div style="margin-top:50px;">
                             </div>
-                                <div class="row">
-                                    <div class="col-md-1">
-                                    </div>
-                                    <div class="col-md-10">
-                                        <h5>A pocket camera that will take great photographs which it is in 24 megapixel sensor and 28mm-equivalent F2.8 lens.</h5>
-                                    </div>
+                            <div class="row">
+                                <div class="col-md-1">
                                 </div>
-                                <div style="margin-top:50px;">
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-1">
-                                    </div>
-                                    <div class="col-md-4">
-                                        <a href="edit.html">
-                                            <button type="button" class="btn-background-send">Edit</button>
-                                        </a>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <button type="button" class="btn-background-delete" onclick="deleteProducts()">Delete</button>
-                                    </div>
+                                <div class="col-md-10">
+                                    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                        nisi ut aliquip ex ea commodo
+                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                        mollit anim id est laborum.
+                                      </h5>
                                 </div>
                             </div>
+                            <div style="margin-top:50px;">
+                            </div>
+                            <div class="row">
+                                <div class="col-md-1">
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="edit.html">
+                                        <button type="button" class="btn-background-send">Edit</button>
+                                    </a>
+                                </div>
+                                <div class="col-md-4">
+                                    <button type="button" class="btn-background-delete"
+                                        onclick="deleteProducts()">Delete</button>
+                                </div>
+                            </div>
+                            <div style="margin-bottom:50px;"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    </div>
+
+    <footer style="bottom: 0;width: 100%;" class="footer mt-auto py-3 bg-light">
+        <div style="text-align:center" class="container">
+            <a href="#" class="fa fa-facebook fa-lg"></a>
+            <a href="#" class="fa fa-twitter fa-lg"></a>
+            <a href="#" class="fa fa-instagram fa-lg"></a>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Home</a></li>
+                <li class="list-inline-item"><a href="#">About</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+            </ul>
+            <span class="text-muted">ByeBye © 2021 Copyright.</span>
+        </div>
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.0/handlebars.min.js"></script>
@@ -192,9 +202,9 @@
             var result = confirm("Do you want to delete this product?");
             if (result) {
                 window.alert("This product is successfully deleted.");
-                window.location.href="deleted.html";
+                window.location.href = "deleted.html";
             } else {
-                window.location.href="edited.html";
+                window.location.href = "edited.html";
             }
         }
     </script>

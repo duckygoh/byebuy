@@ -12,12 +12,15 @@
   <link rel="stylesheet" href="css/profile.css">
   <link rel="stylesheet" href="css/transact.css">
   <link rel="stylesheet" href="css/anchor.css">
+  <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="stylesheet" href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+  <link rel="stylesheet" href='https://use.fontawesome.com/releases/v5.7.2/css/all.css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
-  <link href='https://use.fontawesome.com/releases/v5.7.2/css/all.css'>
 
   <!-- title and favicon -->
   <title>Start Renting!</title>
@@ -28,7 +31,8 @@
   <!-- navbar -->
   <nav style="background-color:white;" class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container-md">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+        aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <a class="navbar-brand" href="home.html">
@@ -84,8 +88,8 @@
           <h3 class="mb-3">Listings</h3>
           <!-- Search Bar -->
           <div class="d-flex justify-content-center px-5">
-            <div class="search"> <input type="text" id="search" class="search-input"
-                placeholder="Search..." name=""> <a href="#" class="search-icon"> <i class="bi bi-search"></i> </a>
+            <div class="search"> <input type="text" id="search" class="search-input" placeholder="Search..." name=""> <a
+                href="#" class="search-icon"> <i class="bi bi-search"></i> </a>
             </div>
           </div>
           <div class="row" id="ads">
@@ -318,7 +322,9 @@
                 </div>
               </div>
               <div style="margin-top:50px;">
-                <button type="button" class="btn btn-outline-primary" onclick="editProfile()">Edit Profile</button>
+                <a href="editprofile.html">
+                  <button type="button" class="btn btn-outline-primary">Edit Profile</button>
+                </a>
               </div>
             </div>
           </div>
@@ -345,15 +351,29 @@
               <tr>
                 <th scope="row">Rentee</th>
                 <td>XF 10 DIGITAL CAMERA</td>
-                <td>Offer received</td>
-                <td><button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#myModal">View
-                    Offer</button></td>
+                <td>Pending Receive</td>
+                <td><button type="button" class="btn btn-outline-danger" data-toggle="modal"
+                    data-target="#myModal">Details</button></td>
               </tr>
               <tr>
-                <th scope="row">Renter</th>
-                <td>LADDER HEAVY DUTY</td>
+                <th scope="row">Rentee</th>
+                <td>SONY RX 100 MARK 3</td>
                 <td>Listed</td>
-                <td><button type="button" class="btn btn-outline-secondary">Send Offer</button></td>
+                <td><button type="button" class="btn btn-outline-danger" data-toggle="modal"
+                    data-target="#myModal1">View Offer</button></td>
+              </tr>
+              <tr>
+                <th scope="row">Rentor</th>
+                <td>DC101 24MP</td>
+                <td>Listed</td>
+                <td><button type="button" class="btn btn-outline-danger">Send Offer</button></td>
+              </tr>
+              <tr>
+                <th scope="row">Rentor</th>
+                <td>LADDER HEAVY DUTY</td>
+                <td>Returned</td>
+                <td><button type="button" class="btn btn-outline-danger" data-toggle="modal"
+                    data-target="#myModalReturned">Details</button></td>
               </tr>
             </tbody>
           </table>
@@ -369,8 +389,8 @@
                 <div class="modal-body">
                   <div class="progress-track">
                     <ul id="progressbar">
-                      <li class="step0 active " id="step1"><span id="three">Offer received</span></li>
-                      <li class="step0 text-center" id="step2">Offer Accepted</li>
+                      <li class="step0 active " id="step1">Offer received</li>
+                      <li class="step0 active text-center" id="step2"><span id="three">Offer Accepted</span></li>
                       <li class="step0 text-center" id="step3">&emsp;&emsp;Rented</li>
                       <li class="step0 text-right" id="step4">Return</li>
                     </ul>
@@ -389,106 +409,169 @@
                       </div>
                     </div>
                     <div class="col-3">
-                      <div class="d-table-row" style="margin-top:30px;"><input onclick="change()" id="accept"
-                          type="button" class="btn btn-success" value="Accept Offer">
+                      <div class="d-table-row" style="margin-bottom:40px;"><input onclick="change()" id="accept"
+                          type="button" class="btn btn-success" value="Received Item">
                       </div>
-                      <div class="d-table-row" style="margin-bottom:40px;"><button type="button"
-                          class="btn btn-danger">&nbsp;Reject Offer</button></div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-
           </div>
+          <div class="modal fade" id="myModalReturned">
+            <div class="modal-dialog modal-dialog-centered" style="max-width: 700px;">
+              <div class="modal-content" style="background-color:#0275d8;">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title mx-auto" style="color:white;">LADDER HEAVY DUTY<br>Received from Jane</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div> <!-- Modal body -->
+                <div class="modal-body">
+                  <div class="progress-track">
+                    <ul id="progressbar">
+                      <li class="step0 active " id="step1">Offer sent</span></li>
+                      <li class="step0 active text-center" id="step2">Offer Accepted</li>
+                      <li class="step0 active text-center" id="step3">&emsp;&emsp;Rented</li>
+                      <li class="step0 active text-right" id="step4"><span id="three">Returned</span></li>
+                    </ul>
+                  </div>
 
-          <div style="margin-top:100px;">
-            <nav class="login-card-footer-nav">
-              <a href="#!">Terms of use.</a>
-              <a href="#!">Privacy policy</a>
-            </nav>
+                  <div class="details d-table" style="color:white;">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="details d-table" style="color:white;">
+                          <div class="d-table-row">
+                            <div class="d-table-cell"> Rate </div>
+                            <div class="d-table-cell"> $20.00 / day </div>
+                          </div>
+                          <div class="d-table-row">
+                            <div class="d-table-cell"> Duration </div>
+                            <div class="d-table-cell"> 15/03/21 - 19/03/21</div>
+                          </div>
+                        </div>
+                        <div class="d-table-row">
+                          <div class="d-table-cell" style="text-align:center"> Transaction completed.</div>
+                        </div>
+                        <div class="d-table-row">
+                          <div class="d-table-cell" style="text-align:center"> Share your experience by rating your
+                            rentee! </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-4"></div>
+                      <div class="col-3">
+                        <div class="d-table-row">
+                          <a href="feedback.html">
+                            <button type="button" class="btn btn-danger">&nbsp;Feedback</button>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    </main>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <div style="margin-top:100px">
+  </div>
+  <footer style="bottom: 0;width: 100%;" class="footer mt-auto py-3 bg-light">
+    <div style="text-align:center" class="container">
+      <a href="#" class="fa fa-facebook fa-lg"></a>
+      <a href="#" class="fa fa-twitter fa-lg"></a>
+      <a href="#" class="fa fa-instagram fa-lg"></a>
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="#">Home</a></li>
+        <li class="list-inline-item"><a href="#">About</a></li>
+        <li class="list-inline-item"><a href="#">Terms</a></li>
+        <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+      </ul>
+      <span class="text-muted">ByeBye © 2021 Copyright.</span>
+    </div>
+  </footer>
 
-    <script>
-      var listing = document.getElementById("ListingInfo");
-      var reviews = document.getElementById("ReviewInfo");
-      var userinfo = document.getElementById("UserInfo");
-      var transaction = document.getElementById("Transactions");
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
+  <script>
+    var listing = document.getElementById("ListingInfo");
+    var reviews = document.getElementById("ReviewInfo");
+    var userinfo = document.getElementById("UserInfo");
+    var transaction = document.getElementById("Transactions");
+
+    listing.style.display = "block";
+    reviews.style.display = "none";
+    userinfo.style.display = "none";
+    transaction.style.display = "none";
+
+    function viewListings() {
       listing.style.display = "block";
-      reviews.style.display = "none";
       userinfo.style.display = "none";
+      reviews.style.display = "none";
       transaction.style.display = "none";
+    }
 
-      function viewListings() {
-        listing.style.display = "block";
-        userinfo.style.display = "none";
-        reviews.style.display = "none";
-        transaction.style.display = "none";
+    function viewReviews() {
+      reviews.style.display = "block";
+      userinfo.style.display = "none";
+      listing.style.display = "none";
+      transaction.style.display = "none";
+    }
+
+    function viewUserInfo() {
+      userinfo.style.display = "block";
+      listing.style.display = "none";
+      reviews.style.display = "none";
+      transaction.style.display = "none";
+    }
+
+    function viewTransactions() {
+      userinfo.style.display = "none";
+      listing.style.display = "none";
+      reviews.style.display = "none";
+      transaction.style.display = "block";
+    }
+
+    var click = 0;
+
+    function change() {
+      click += 1;
+      document.getElementById("accept").value = "Confirm?";
+
+      if (click == 2) {
+        setTimeout(function () {
+          window.location.href = "accepted.html";
+        }, 2000);
       }
+    }
+  </script>
 
-      function viewReviews() {
-        reviews.style.display = "block";
-        userinfo.style.display = "none";
-        listing.style.display = "none";
-        transaction.style.display = "none";
-      }
-
-      function viewUserInfo() {
-        userinfo.style.display = "block";
-        listing.style.display = "none";
-        reviews.style.display = "none";
-        transaction.style.display = "none";
-      }
-
-      function viewTransactions() {
-        userinfo.style.display = "none";
-        listing.style.display = "none";
-        reviews.style.display = "none";
-        transaction.style.display = "block";
-      }
-
-      var click = 0;
-
-      function change() {
-        click += 1;
-        document.getElementById("accept").value = "Confirm?";
-
-        if (click == 2) {
-          setTimeout(function () {
-            window.location.href = "accepted.html";
-          }, 2000);
-        }
-      }
-    </script>
-
-    <script>
-      $(document).ready(function () {
-        $("#myInput").on("keyup", function () {
-          var value = $(this).val().toLowerCase();
-          $("#myList tr").filter(function () {
-            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-          });
+  <script>
+    $(document).ready(function () {
+      $("#myInput").on("keyup", function () {
+        var value = $(this).val().toLowerCase();
+        $("#myList tr").filter(function () {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
         });
       });
+    });
 
-      $(document).ready(function () {
-        $("#search").on("keyup", function () {
-          var value = $(this).val().toLowerCase();
-          $('div[data-role="searchproduct"]').filter(function () {
-            $(this).toggle($(this).find('h5').text().toLowerCase().indexOf(value) > -1)
-          });
+    $(document).ready(function () {
+      $("#search").on("keyup", function () {
+        var value = $(this).val().toLowerCase();
+        $('div[data-role="searchproduct"]').filter(function () {
+          $(this).toggle($(this).find('h5').text().toLowerCase().indexOf(value) > -1)
         });
       });
-    </script>
+    });
+  </script>
 
 </body>
 
